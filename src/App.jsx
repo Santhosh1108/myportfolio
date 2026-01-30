@@ -200,7 +200,7 @@ export default function App() {
             <p className="text-slate-300 mb-4" style={{ fontFamily: '"Instrument Sans", sans-serif' }}>
               Download CV
             </p>
-            <a href="https://drive.google.com/file/d/your-resume-id/view" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-orange-500/20 border border-orange-500/30 rounded-xl hover:bg-orange-500/30 transition-all font-medium text-center">
+            <a href="https://drive.google.com/file/d/1qFlj6uxxgHzQtx962AoW5BiE_LmuFwtf/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-orange-500/20 border border-orange-500/30 rounded-xl hover:bg-orange-500/30 transition-all font-medium text-center">
               Download PDF
             </a>
           </div>
