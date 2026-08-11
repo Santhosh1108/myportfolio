@@ -86,19 +86,22 @@
     display:flex; align-items:center; justify-content:space-between;
     padding:16px 28px; max-width:980px; margin:0 auto;
   }
-  .brand{ font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:17px; letter-spacing:.02em; }
+  .brand{ font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:16px; letter-spacing:.01em; white-space:nowrap; color:var(--paper); }
   .brand .dim{ color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:400; margin-left:6px;}
-  nav ul{ list-style:none; display:flex; gap:26px; margin:0; padding:0; }
-  nav a{ text-decoration:none; font-size:13px; color:var(--paper-dim); font-family:'IBM Plex Mono', monospace; letter-spacing:.02em; transition:color .15s; }
-  nav a:hover{ color:var(--amber); }
+  .nav ul{ list-style:none; display:flex; margin:0; padding:0; }
+  .nav ul li{ margin-right:26px; }
+  .nav ul li:last-child{ margin-right:0; }
+  .nav a{ text-decoration:none; font-size:13px; color:var(--paper-dim); font-family:'IBM Plex Mono', monospace; letter-spacing:.02em; transition:color .15s; }
+  .nav a:hover{ color:var(--amber); }
   .nav-cta{
-    display:inline-block; text-decoration:none;
+    display:inline-flex; align-items:center; gap:6px; text-decoration:none;
     font-family:'IBM Plex Mono', monospace; font-size:12px;
     color:var(--ink-900); background:var(--amber);
     padding:8px 14px; border-radius:2px; font-weight:600;
   }
   .nav-links{ display:flex; align-items:center; gap:26px; }
-  .menu-toggle{ display:none; background:none; border:1px solid var(--line); color:var(--paper); padding:6px 10px; font-family:'IBM Plex Mono',monospace; cursor:pointer; }
+  .menu-toggle{ display:none; background:none; border:1px solid var(--line); color:var(--paper); padding:8px 12px; font-family:'IBM Plex Mono',monospace; font-size:12px; cursor:pointer; border-radius:2px; }
+  .mobile-panel{ display:none; }
 
   /* section headers — blueprint annotation style */
   .section{ padding:96px 0; border-bottom:1px dashed var(--line); }
@@ -122,7 +125,8 @@
   }
   .hero h1 .accent{ color:var(--amber); }
   .hero p.lede{ max-width:600px; color:var(--paper-dim); font-size:17px; margin:0 0 40px; }
-  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:70px; }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:26px; }
+  .hero-meta{ font-size:12.5px; color:var(--muted); letter-spacing:.03em; margin:0; padding-top:22px; border-top:1px dashed var(--line); max-width:520px; }
   .btn{
     font-family:'IBM Plex Mono', monospace; font-size:13px; text-decoration:none;
     padding:12px 20px; border-radius:2px; display:inline-flex; align-items:center; gap:8px;
@@ -130,11 +134,6 @@
   .btn-primary{ background:var(--amber); color:var(--ink-900); font-weight:600; }
   .btn-outline{ border:1px solid var(--line); color:var(--paper); }
   .btn-outline:hover{ border-color:var(--blueprint); color:var(--blueprint); }
-
-  .stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
-  .stat{ background:var(--ink-900); padding:22px 20px; }
-  .stat .n{ font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:700; color:var(--paper); }
-  .stat .l{ font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin-top:4px; }
 
   /* about */
   .about-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:56px; align-items:start; }
@@ -200,9 +199,20 @@
   .footer-inner{ display:flex; justify-content:space-between; align-items:center; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--muted); flex-wrap:wrap; gap:10px;}
 
   @media (max-width: 760px){
-    nav ul{ display:none; }
     .nav-links > ul{ display:none; }
-    .stats{ grid-template-columns:repeat(2,1fr); }
+    .nav-links .nav-cta{ display:none; }
+    .menu-toggle{ display:inline-block; }
+    .mobile-panel.open{
+      display:flex; flex-direction:column; gap:2px;
+      padding:6px 28px 20px; border-bottom:1px dashed var(--line);
+      background:var(--ink-900);
+    }
+    .mobile-panel a{
+      text-decoration:none; color:var(--paper-dim); font-family:'IBM Plex Mono',monospace;
+      font-size:14px; padding:12px 0; border-top:1px solid var(--line);
+    }
+    .mobile-panel a:first-child{ border-top:none; }
+    .mobile-panel .nav-cta{ margin-top:10px; text-align:center; justify-content:center; }
     .about-grid, .two-col, .proj-grid{ grid-template-columns:1fr; }
     .tl-item{ grid-template-columns:1fr; gap:8px; }
     .section{ padding:64px 0; }
@@ -218,7 +228,7 @@
 
 <header class="nav">
   <div class="nav-inner">
-    <div class="brand">Santhosh B. <span class="dim">// portfolio</span></div>
+    <div class="brand">Santhosh Bommasamudram</div>
     <div class="nav-links">
       <ul>
         <li><a href="#about">About</a></li>
@@ -227,8 +237,17 @@
         <li><a href="#prds">PRDs</a></li>
         <li><a href="#education">Education</a></li>
       </ul>
-      <a class="nav-cta" href="#contact">Get in touch</a>
+      <a class="nav-cta" href="#contact">Get in touch ↗</a>
     </div>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#about">About</a>
+    <a href="#experience">Leadership</a>
+    <a href="#projects">Projects</a>
+    <a href="#prds">PRDs</a>
+    <a href="#education">Education</a>
+    <a class="nav-cta" href="#contact">Get in touch ↗</a>
   </div>
 </header>
 
@@ -245,12 +264,7 @@
       <a class="btn btn-outline" href="https://www.linkedin.com/in/santhosh12/" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="btn btn-outline" href="https://github.com/Santhosh1108" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
-    <div class="stats">
-      <div class="stat"><div class="n">7.57</div><div class="l">CGPA · B.Tech CS</div></div>
-      <div class="stat"><div class="n">2</div><div class="l">Shipped ML products</div></div>
-      <div class="stat"><div class="n">10K+</div><div class="l">Followers grown, Media Council</div></div>
-      <div class="stat"><div class="n">2</div><div class="l">Independent PRDs written</div></div>
-    </div>
+    <p class="hero-meta mono">IIIT Ranchi — B.Tech, Computer Science · Class of 2026</p>
   </section>
 
   <!-- ABOUT -->
@@ -442,10 +456,8 @@
       <a class="btn btn-primary" href="mailto:work.santhosh18@gmail.com">Email me ↗</a>
       <div class="contact-links">
         <a href="mailto:work.santhosh18@gmail.com">work.santhosh18@gmail.com</a>
-        <a href="tel:+918008994897">+91 80089 94897</a>
         <a href="https://www.linkedin.com/in/santhosh12/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="https://github.com/Santhosh1108" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://myportfolio-five-opal-40.vercel.app/" target="_blank" rel="noopener">Old portfolio ↗</a>
       </div>
     </div>
   </section>
@@ -458,5 +470,21 @@
   </div>
 </footer>
 
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobilePanel = document.getElementById('mobilePanel');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobilePanel.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    menuToggle.textContent = isOpen ? 'Close' : 'Menu';
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobilePanel.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = 'Menu';
+    });
+  });
+</script>
 </body>
 </html>
