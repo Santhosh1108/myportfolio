@@ -183,40 +183,211 @@ footer{border-top:1px solid var(--line);padding:27px 0 42px;color:var(--soft);fo
 </div></div></section>
 
 
-<article class="project reveal">
-  <div class="project-top">
-    <div>
-      <div class="label">04 · AI / GTM Automation</div>
-      <h3>Lead Generation Automation</h3>
+<section class="section" id="projects">
+  <div class="wrap">
+
+    <div class="head reveal">
+      <div>
+        <div class="kicker">04 / Selected work</div>
+        <h2 class="section-title">Projects where I <em>build and think.</em></h2>
+      </div>
+      <p class="intro">Product thinking backed by technical execution.</p>
     </div>
-    <span class="status">Built</span>
+
+    <div class="projects">
+
+      <!-- PROJECT 01 -->
+      <article class="project feature reveal">
+        <div class="project-top">
+          <div>
+            <div class="label">01 · AI Product Development</div>
+            <h3>SpecLens</h3>
+          </div>
+          <span class="status">Featured</span>
+        </div>
+
+        <p class="desc">
+          An AI-assisted product discovery tool that turns an early product idea
+          into a structured, reviewable product specification.
+        </p>
+
+        <ul>
+          <li>
+            Designed a guided discovery flow that asks focused follow-up questions
+            to clarify users, problems, goals and requirements.
+          </li>
+          <li>
+            Built structured product states covering requirements, user stories
+            and acceptance criteria.
+          </li>
+          <li>
+            Added PRD generation and automated critique to identify gaps and
+            improve specification quality before development.
+          </li>
+        </ul>
+
+        <div class="tags">
+          <span>FastAPI</span>
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>Ollama</span>
+          <span>Qwen3</span>
+          <span>Pydantic</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/Santhosh1108" target="_blank">
+            GitHub ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- PROJECT 02 -->
+      <article class="project reveal">
+        <div class="project-top">
+          <div>
+            <div class="label">02 · RAG / Document Intelligence</div>
+            <h3>AI Support Agent</h3>
+          </div>
+          <span class="status">Live</span>
+        </div>
+
+        <p class="desc">
+          A multi-document AI support application built to answer questions
+          from uploaded PDFs with grounded, page-level citations.
+        </p>
+
+        <ul>
+          <li>
+            Built semantic retrieval using Sentence Transformers and FAISS
+            to find relevant information across documents.
+          </li>
+          <li>
+            Added recursive chunking, cached vector indexing and streaming
+            responses for a faster user experience.
+          </li>
+          <li>
+            Designed the product around traceable answers rather than
+            unsupported AI responses.
+          </li>
+        </ul>
+
+        <div class="tags">
+          <span>Python</span>
+          <span>FAISS</span>
+          <span>RAG</span>
+          <span>Groq</span>
+          <span>Llama 3</span>
+          <span>Streamlit</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/Santhosh1108" target="_blank">
+            GitHub ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- PROJECT 03 -->
+      <article class="project reveal">
+        <div class="project-top">
+          <div>
+            <div class="label">03 · NLP / Model Evaluation</div>
+            <h3>AI Sentiment Analysis</h3>
+          </div>
+          <span class="status">Live</span>
+        </div>
+
+        <p class="desc">
+          A sentiment classification application comparing traditional
+          machine learning with modern Transformer models on SST-2.
+        </p>
+
+        <ul>
+          <li>
+            Evaluated Logistic Regression, Naive Bayes, BERT, DistilBERT
+            and RoBERTa across the same classification task.
+          </li>
+          <li>
+            Compared accuracy, precision, recall and F1-score to understand
+            model trade-offs rather than relying on a single metric.
+          </li>
+          <li>
+            Built an interactive interface with confidence scoring to make
+            model behaviour easier to inspect.
+          </li>
+        </ul>
+
+        <div class="tags">
+          <span>Python</span>
+          <span>Machine Learning</span>
+          <span>BERT</span>
+          <span>RoBERTa</span>
+          <span>Streamlit</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/Santhosh1108" target="_blank">
+            GitHub ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- PROJECT 04 -->
+      <article class="project reveal">
+        <div class="project-top">
+          <div>
+            <div class="label">04 · GTM / AI Automation</div>
+            <h3>Lead Generation Automation</h3>
+          </div>
+          <span class="status">Built</span>
+        </div>
+
+        <p class="desc">
+          An n8n-based lead generation workflow designed to reduce repetitive
+          prospecting work and turn raw business data into a structured
+          outbound pipeline.
+        </p>
+
+        <ul>
+          <li>
+            Automated lead discovery and processing through a repeatable
+            workflow instead of manual prospecting.
+          </li>
+          <li>
+            Connected data collection, filtering and enrichment into a
+            structured lead pipeline.
+          </li>
+          <li>
+            Built the workflow around a practical GTM use case, connecting
+            automation with real sales and growth operations.
+          </li>
+        </ul>
+
+        <div class="tags">
+          <span>n8n</span>
+          <span>AI Automation</span>
+          <span>Lead Generation</span>
+          <span>GTM</span>
+          <span>Workflow Automation</span>
+        </div>
+
+        <div class="project-links">
+          <a
+            href="https://github.com/Santhosh1108/lead-generation-automation"
+            target="_blank"
+          >
+            GitHub ↗
+          </a>
+        </div>
+      </article>
+
+    </div>
   </div>
-
-  <p class="desc">
-    An n8n workflow that automates lead discovery, enrichment and qualification
-    to reduce repetitive prospecting work and create a more structured outbound pipeline.
-  </p>
-
-  <ul>
-    <li>Built an automated workflow to discover and process relevant business leads.</li>
-    <li>Connected data collection, filtering and enrichment into a repeatable pipeline.</li>
-    <li>Designed the workflow around practical GTM use cases rather than manual prospecting.</li>
-  </ul>
-
-  <div class="tags">
-    <span>n8n</span>
-    <span>AI Automation</span>
-    <span>Lead Generation</span>
-    <span>GTM</span>
-    <span>Workflow Automation</span>
-  </div>
-
-  <div class="project-links">
-    <a href="https://github.com/Santhosh1108/lead-generation-automation" target="_blank">
-      GitHub ↗
-    </a>
-  </div>
-</article>
+</section>
 
 <section class="section" id="product"><div class="wrap">
 <div class="head reveal"><div><div class="kicker">05 / Product portfolio</div><h2 class="section-title">I also practice product <em>without waiting for a job title.</em></h2></div><p class="intro">PRDs and product work focused on problem definition, workflows and decisions.</p></div>
