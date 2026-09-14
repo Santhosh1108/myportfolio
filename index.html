@@ -2,526 +2,238 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Santhosh Bommasamudram — Product Discovery, Product Strategy, AI and technical execution.">
-<title>Santhosh — Product × AI × Execution</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Santhosh Bommasamudram — Product-minded builder working across product, AI and technology.">
+<title>Santhosh Bommasamudram — Product & AI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0c0b09;--panel:#15130f;--panel2:#1b1813;--text:#f3efe4;--muted:#b3ac9e;--soft:#78715f;
-  --lime:#c6a15b;--violet:#3f6b58;--cyan:#8b3a3a;--line:rgba(243,239,228,.12);
-  --max:1160px;--r:14px;
+  --bg:#f7f5f0;
+  --surface:#ffffff;
+  --surface-2:#eeebe3;
+  --ink:#191816;
+  --muted:#6c6861;
+  --faint:#9b968d;
+  --line:#ddd9d0;
+  --accent:#b86b3d;
+  --accent-soft:#ead7c9;
+  --max:1120px;
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at 80% 8%,rgba(198,161,91,.13),transparent 28rem),radial-gradient(circle at 8% 35%,rgba(63,107,88,.10),transparent 25rem),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.025;z-index:1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-::selection{background:var(--lime);color:#0d1117}a{color:inherit}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
-:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:4px}
-.skip{position:fixed;top:-60px;left:16px;z-index:100;background:var(--lime);color:#0d1117;padding:10px 16px;border-radius:8px;font-weight:700;font-size:12px;text-decoration:none;transition:.2s}
-.skip:focus{top:16px}
-
-.glow-cursor{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(198,161,91,.075),transparent 70%);transform:translate(-50%,-50%);transition:opacity .3s;opacity:0}
-@media(hover:hover){.glow-cursor{opacity:1}}
-
-.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--lime),var(--violet));z-index:50;width:0%;transition:width .1s linear}
-
-.nav{position:fixed;z-index:20;top:0;left:0;right:0;border-bottom:1px solid transparent;transition:.25s}
-.nav.scrolled{background:rgba(13,17,23,.82);backdrop-filter:blur(18px);border-color:var(--line)}
-.nav-in{height:76px;display:flex;align-items:center;justify-content:space-between}
-.brand{text-decoration:none;display:flex;gap:10px;align-items:center;font-weight:700;font-size:13px}
-.mark{width:34px;height:34px;border-radius:10px;background:var(--lime);color:#0d1117;display:grid;place-items:center;font:22px "Instrument Serif";transition:.3s}
-.brand:hover .mark{transform:rotate(-8deg) scale(1.06)}
-.links{display:flex;gap:6px;align-items:center}
-.links a{position:relative;font-size:12px;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:999px;transition:.2s}
-.links a:not(.cta):hover{color:var(--text);background:rgba(255,255,255,.045)}
-.links a.active:not(.cta){color:var(--lime)}
-.links .cta{background:var(--text);color:#0d1117;padding:9px 16px;border-radius:999px;font-weight:700;transition:.25s}
-.links .cta:hover{background:var(--lime);transform:translateY(-1px)}
-.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:999px;padding:8px 12px}
-
-.hero{min-height:100vh;padding-top:125px;padding-bottom:90px;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center;position:relative;z-index:1}
-.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(198,161,91,.28);background:rgba(198,161,91,.06);padding:7px 11px;border-radius:999px;color:#ecdcb4;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:700}
-.dot{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 0 5px rgba(198,161,91,.08);animation:pulse 2.4s ease-in-out infinite}
-@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(198,161,91,.04)}}
-h1{font-size:clamp(55px,7.5vw,94px);line-height:.93;letter-spacing:-.065em;margin:25px 0;font-weight:700;max-width:790px}
-h1 .line{display:block;overflow:hidden}
-h1 .line span{display:inline-block;animation:rise .8s cubic-bezier(.16,1,.3,1) both}
-h1 .line:nth-child(2) span{animation-delay:.08s}
-@keyframes rise{from{transform:translateY(110%)}to{transform:translateY(0)}}
-h1 em,.section-title em,.contact h2 em{font-family:"Instrument Serif";font-weight:400;color:var(--lime);font-style:italic}
-.lead{max-width:700px;color:var(--muted);font-size:17px;margin:0}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:31px}.btn{padding:11px 17px;border-radius:999px;text-decoration:none;font-size:12px;font-weight:700;transition:.25s cubic-bezier(.2,.9,.3,1.2);display:inline-flex;align-items:center;gap:8px;position:relative}
-.primary{background:var(--lime);color:#f2f2ee}.primary:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(198,161,91,.28)}
-.secondary{border:1px solid var(--line);color:var(--text)}.secondary:hover{border-color:rgba(198,161,91,.5);background:rgba(198,161,91,.06);transform:translateY(-3px)}
-.meta{display:flex;gap:20px;flex-wrap:wrap;color:var(--soft);font-size:11px;margin-top:25px}.meta span:before{content:"•";color:var(--violet);margin-right:7px}
-.hero-art{min-height:440px;position:relative;display:grid;place-items:center}
-.avatar{position:absolute;top:-6px;left:0;width:84px;height:84px;border-radius:50%;overflow:hidden;border:2px solid var(--line);background:var(--panel2);display:grid;place-items:center;z-index:2}
-.avatar img{width:100%;height:100%;object-fit:cover;display:block}
-.avatar .fallback{display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:var(--lime);font-family:"Instrument Serif"}
-.grid-orb{width:330px;height:330px;border-radius:48% 52% 40% 60%;transform:rotate(16deg);background:linear-gradient(145deg,#e4c889,#c6a15b 54%,#6b4f27);box-shadow:0 45px 110px rgba(198,161,91,.22);animation:drift 8s ease-in-out infinite;will-change:transform}
-.grid-orb:before{content:"";position:absolute;width:330px;height:330px;border:1px solid rgba(255,255,255,.17);border-radius:50%;transform:scale(.74) rotate(-25deg)}
-.grid-orb:after{content:"";position:absolute;inset:-40px;border:1px dashed rgba(198,161,91,.15);border-radius:50%;animation:spin 30s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.note{position:absolute;right:-5px;bottom:35px;width:235px;background:rgba(18,25,35,.88);backdrop-filter:blur(16px);border:1px solid var(--line);padding:18px;border-radius:18px;transition:.3s}
-.note:hover{border-color:rgba(198,161,91,.3);transform:translateY(-3px)}
-.note small{color:var(--lime);text-transform:uppercase;letter-spacing:.12em;font-size:9px;font-weight:700}.note strong{display:block;font-size:15px;line-height:1.35;margin-top:6px}
-@keyframes drift{50%{transform:rotate(21deg) translateY(-12px)}}
-.scroll-cue{position:absolute;bottom:-38px;left:0;display:flex;align-items:center;gap:10px;color:var(--soft);font-size:10px;text-transform:uppercase;letter-spacing:.12em}
-.scroll-cue .bar{width:1px;height:26px;background:linear-gradient(var(--lime),transparent);animation:scrolldown 1.8s ease-in-out infinite}
-@keyframes scrolldown{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-
-section{scroll-margin-top:90px}.section{border-top:1px solid var(--line);padding:105px 0;position:relative;z-index:1}
-.head{display:flex;justify-content:space-between;gap:35px;align-items:end;margin-bottom:48px}
-.kicker{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
-.kicker:before{content:"";width:16px;height:1px;background:var(--lime)}
-.section-title{font-size:clamp(37px,4.6vw,57px);line-height:1;letter-spacing:-.05em;margin:0}
-.intro{max-width:450px;color:var(--muted);font-size:13px;margin:0}
-.about{display:grid;grid-template-columns:1.1fr .9fr;gap:75px}.about-lead{font-size:23px;line-height:1.35;letter-spacing:-.025em;margin:0 0 20px}.about-copy{font-size:14px;color:var(--muted);max-width:650px}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.card{border:1px solid var(--line);background:rgba(255,255,255,.018);padding:20px;border-radius:18px;min-height:135px;transition:.3s cubic-bezier(.2,.8,.3,1);position:relative;overflow:hidden}
-.card:before{content:"";position:absolute;inset:0;background:radial-gradient(140px circle at var(--mx,50%) var(--my,50%),rgba(198,161,91,.08),transparent 70%);opacity:0;transition:.3s}
-.card:hover:before{opacity:1}
-.card:hover{transform:translateY(-4px);border-color:rgba(198,161,91,.28)}
-.num{color:var(--lime);font-size:10px;font-weight:700}.card h3{font-size:15px;margin:20px 0 5px}.card p{font-size:11px;color:var(--soft);margin:0;line-height:1.5}
-
-.timeline{border-top:1px solid var(--line);position:relative}
-.job{display:grid;grid-template-columns:155px 1fr 130px;gap:30px;padding:28px 0;border-bottom:1px solid var(--line);transition:.25s}
-.job:hover{padding-left:10px}
-.date,.type{font-size:11px;color:var(--soft)}.type{text-align:right;text-transform:uppercase;letter-spacing:.1em}.job h3{margin:0;font-size:19px;letter-spacing:-.02em}.org{color:var(--violet);font-size:12px}.job ul{margin:9px 0 0;padding-left:18px;color:var(--muted);font-size:12px}.job li{margin-bottom:4px}
-
-.projects{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-.project{grid-column:span 6;min-height:355px;border:1px solid var(--line);border-radius:22px;padding:27px;position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.008));transition:.35s cubic-bezier(.2,.8,.3,1)}
-.project.feature{grid-column:span 12;min-height:390px;background:radial-gradient(circle at 80% 25%,rgba(198,161,91,.08),transparent 28rem),var(--panel)}
-.project:before{content:"";position:absolute;inset:0;opacity:0;background:linear-gradient(115deg,transparent 30%,rgba(198,161,91,.06) 50%,transparent 70%);transition:opacity .4s;pointer-events:none}
-.project:hover:before{opacity:1}
-.project:hover{transform:translateY(-6px);border-color:rgba(198,161,91,.35);box-shadow:0 28px 75px rgba(0,0,0,.25)}
-.project-top{display:flex;justify-content:space-between;gap:15px}.label{color:var(--lime);font-size:9px;text-transform:uppercase;letter-spacing:.14em;font-weight:700}.status{border:1px solid var(--line);padding:5px 9px;border-radius:999px;font-size:9px;color:var(--soft);text-transform:uppercase}
-.project h3{font-size:27px;margin:10px 0 8px;letter-spacing:-.035em}.feature h3{font-size:37px}.desc{color:var(--muted);font-size:13px;max-width:700px;margin:0}.project ul{color:var(--muted);font-size:12px;padding-left:18px;max-width:760px}.project li{margin-bottom:5px}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:21px}.tags span,.chip{border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:var(--soft);font-size:9px;transition:.2s}
-.project:hover .tags span{border-color:rgba(198,161,91,.2);color:var(--muted)}
-.project-links{position:absolute;left:27px;bottom:23px;display:flex;gap:18px}.project-links a{font-size:11px;text-decoration:none;font-weight:700;color:var(--text);transition:.2s}.project-links a:hover{color:var(--lime)}
-
-.work{border-top:1px solid var(--line)}.work a{display:flex;justify-content:space-between;gap:20px;padding:20px 4px;border-bottom:1px solid var(--line);text-decoration:none;transition:.2s}.work a:hover{padding-left:13px;padding-right:13px;background:rgba(255,255,255,.018)}.work strong{font-size:14px}.work small{display:block;color:var(--soft);font-size:10px}.arrow{font-size:20px;color:var(--lime);transition:.25s;display:inline-block}.work a:hover .arrow{transform:translate(4px,-4px)}
-
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{padding:24px;border:1px solid var(--line);border-radius:19px;background:rgba(255,255,255,.018);transition:.25s}.skill:hover{border-color:rgba(198,161,91,.25);transform:translateY(-3px)}.skill h3{margin:0 0 17px;font-size:14px}.skill h3 span{color:var(--lime);margin-right:7px}.chips{display:flex;flex-wrap:wrap;gap:7px}
-.chip:hover{border-color:rgba(198,161,91,.3);color:var(--text)}
-
-.edu{display:grid;grid-template-columns:1fr 1fr;gap:50px}.degree{border:1px solid var(--line);border-radius:21px;padding:28px;background:linear-gradient(145deg,rgba(198,161,91,.045),rgba(198,161,91,.04))}.mini{color:var(--lime);text-transform:uppercase;letter-spacing:.13em;font-size:9px;font-weight:700}.degree h3{font-size:24px;line-height:1.2;margin:14px 0 4px}.degree p{color:var(--muted);font-size:12px;margin:0}.certs{border-top:1px solid var(--line)}.cert{padding:16px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;transition:.2s}.cert:hover{padding-left:8px}.cert strong{font-size:12px}.cert small{display:block;color:var(--soft);font-size:10px}.cert a{color:var(--violet);font-size:10px;text-decoration:none}
-
-.contact{padding:100px 0 115px;border-top:1px solid var(--line);position:relative;overflow:hidden}
-.contact:before{content:"";position:absolute;top:-20%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(198,161,91,.08),transparent 70%);pointer-events:none}
-.contact h2{font-size:clamp(47px,6.5vw,82px);line-height:.96;letter-spacing:-.06em;max-width:850px;margin:20px 0;position:relative}.contact p{max-width:560px;color:var(--muted);font-size:14px;position:relative}
-.contact-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px;position:relative}.contact-links a{padding:9px 13px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--muted);font-size:10px;transition:.2s}.contact-links a:hover{border-color:var(--lime);color:var(--text);transform:translateY(-2px)}
-footer{border-top:1px solid var(--line);padding:27px 0 42px;color:var(--soft);font-size:10px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(18px);transition:.7s cubic-bezier(.2,.8,.2,1)}.reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){.links{display:none}.menu{display:block}.nav.open .links{display:flex;position:absolute;top:68px;left:20px;right:20px;flex-direction:column;align-items:stretch;gap:0;background:#121923;border:1px solid var(--line);padding:8px;border-radius:17px}.nav.open .links a{padding:11px}.hero{grid-template-columns:1fr}.hero-art{min-height:300px}.about,.edu{grid-template-columns:1fr;gap:45px}.job{grid-template-columns:110px 1fr}.type{display:none}.skills{grid-template-columns:1fr 1fr}.glow-cursor{display:none}}
-@media(max-width:650px){.wrap{width:calc(100% - 28px)}.hero{padding-top:120px}.hero h1{font-size:clamp(48px,15vw,72px)}.section{padding:78px 0}.head{display:block;margin-bottom:35px}.intro{margin-top:14px}.cards,.skills{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:6px}.projects .project,.projects .feature{grid-column:span 12;min-height:390px}.feature h3{font-size:29px}.grid-orb{width:250px;height:250px}.note{width:190px;right:0}.contact{padding:80px 0}.contact h2{font-size:clamp(46px,14vw,68px)}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}h1 .line span{animation:none;transform:none}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--ink);color:var(--bg)}
+.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:10}
+.brand{font-size:14px;font-weight:700;letter-spacing:-.02em}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:13px;color:var(--muted)}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{padding:9px 15px;border:1px solid var(--ink);border-radius:999px;color:var(--ink)!important}
+.nav-cta:hover{background:var(--ink);color:var(--bg)!important}
+.hero{padding:106px 0 96px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:86px;align-items:end}
+.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.13em;font-size:10px;font-weight:700;color:var(--accent)}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--accent)}
+h1{font-size:clamp(58px,8vw,100px);line-height:.92;letter-spacing:-.07em;margin:20px 0 28px;max-width:780px}
+h1 em{font-family:"Instrument Serif";font-weight:400;letter-spacing:-.03em}
+.hero-copy{font-size:18px;line-height:1.55;color:var(--muted);max-width:650px;margin:0}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+.button{display:inline-flex;align-items:center;gap:8px;padding:11px 17px;border-radius:999px;font-size:12px;font-weight:700;transition:.2s ease}
+.button-primary{background:var(--ink);color:var(--bg)}
+.button-primary:hover{transform:translateY(-2px)}
+.button-secondary{border:1px solid var(--line);background:var(--surface)}
+.button-secondary:hover{border-color:var(--ink);transform:translateY(-2px)}
+.hero-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;font-size:11px;color:var(--faint)}
+.hero-meta span:before{content:"•";margin-right:7px;color:var(--accent)}
+.hero-photo{justify-self:end;width:min(100%,350px)}
+.photo-frame{background:var(--surface);padding:12px;border:1px solid var(--line);transform:rotate(2.5deg);box-shadow:0 20px 45px rgba(28,25,20,.08)}
+.photo-frame img{aspect-ratio:4/5;object-fit:cover;filter:saturate(.82)}
+.photo-caption{display:flex;justify-content:space-between;gap:12px;padding:12px 2px 1px;font-size:10px;color:var(--faint);letter-spacing:.04em}
+.section{padding:92px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:44px}
+.kicker{font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--accent);margin-bottom:7px}
+.section-title{font-size:clamp(34px,4.8vw,55px);line-height:1;letter-spacing:-.055em;margin:0}
+.section-intro{max-width:410px;margin:0;color:var(--muted);font-size:13px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px}
+.about-lead{font-size:25px;line-height:1.35;letter-spacing:-.025em;margin:0 0 18px;max-width:650px}
+.about-copy{font-size:14px;color:var(--muted);max-width:650px}
+.traits{display:grid;gap:0;border-top:1px solid var(--line)}
+.trait{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.trait small{color:var(--accent);font-size:10px;font-weight:700;padding-top:3px}
+.trait strong{font-size:14px}
+.trait p{margin:4px 0 0;color:var(--muted);font-size:12px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.project{background:var(--surface);border:1px solid var(--line);padding:28px;min-height:330px;display:flex;flex-direction:column;transition:.22s ease}
+.project:hover{transform:translateY(-4px);border-color:#c8c2b7;box-shadow:0 20px 40px rgba(28,25,20,.06)}
+.project.feature{grid-column:span 2;min-height:360px;background:var(--surface-2)}
+.project-top{display:flex;justify-content:space-between;gap:14px;align-items:center}
+.project-type{font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+.project-year{font-size:10px;color:var(--faint)}
+.project h3{font-size:30px;line-height:1.05;letter-spacing:-.04em;margin:30px 0 10px}
+.feature h3{font-size:42px;max-width:700px}
+.project p{font-size:13px;color:var(--muted);max-width:690px;margin:0}
+.project-result{margin-top:20px;font-size:12px;color:var(--ink);max-width:700px}
+.project-result b{font-weight:700}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:28px}
+.tags span{font-size:9px;border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:var(--muted)}
+.project-link{margin-top:18px;font-size:11px;font-weight:700;color:var(--ink);width:max-content;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.project-link:hover{color:var(--accent);border-color:var(--accent)}
+.experience{border-top:1px solid var(--line)}
+.role{display:grid;grid-template-columns:150px 1fr 140px;gap:30px;padding:24px 0;border-bottom:1px solid var(--line)}
+.role-date,.role-type{font-size:11px;color:var(--faint)}
+.role-type{text-align:right;text-transform:uppercase;letter-spacing:.09em}
+.role h3{font-size:17px;margin:0;letter-spacing:-.02em}
+.role-org{font-size:12px;color:var(--accent);margin-top:2px}
+.role p{font-size:12px;color:var(--muted);margin:8px 0 0;max-width:690px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skill{background:var(--surface);border:1px solid var(--line);padding:24px;min-height:180px}
+.skill-num{font-size:10px;color:var(--accent);font-weight:700}
+.skill h3{font-size:17px;margin:26px 0 8px}
+.skill p{font-size:12px;color:var(--muted);margin:0}
+.contact{padding:110px 0 115px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:50px;align-items:end}
+.contact h2{font-size:clamp(42px,6vw,72px);line-height:.95;letter-spacing:-.065em;margin:0;max-width:760px}
+.contact h2 em{font-family:"Instrument Serif";font-weight:400}
+.contact-side{max-width:260px;color:var(--muted);font-size:13px}
+.contact-side a{display:inline-block;margin-top:20px;color:var(--ink);font-weight:700;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.footer{border-top:1px solid var(--line);padding:18px 0 24px;display:flex;justify-content:space-between;gap:20px;font-size:10px;color:var(--faint)}
+.footer-links{display:flex;gap:17px}
+.footer-links a:hover{color:var(--ink)}
+@media(max-width:820px){
+  .nav{height:68px}.nav-links{gap:16px}.nav-links a:not(.nav-cta){display:none}
+  .hero{grid-template-columns:1fr;gap:45px;padding:78px 0 80px}.hero-photo{justify-self:start;width:min(100%,300px)}
+  .about-grid{grid-template-columns:1fr;gap:50px}.section{padding:75px 0}.section-head{display:block}.section-intro{margin-top:16px}
+  .projects{grid-template-columns:1fr}.project.feature{grid-column:auto}.feature h3{font-size:32px}
+  .role{grid-template-columns:1fr;gap:7px}.role-type{text-align:left}.role-date{order:-1}
+  .skills{grid-template-columns:1fr 1fr}.contact{display:block;padding:80px 0}.contact-side{margin-top:28px}
+}
+@media(max-width:520px){.wrap{width:min(calc(100% - 28px),var(--max))}h1{font-size:58px}.hero-copy{font-size:16px}.skills{grid-template-columns:1fr}.photo-frame{transform:none}.footer{display:block}.footer-links{margin-top:9px}.traits .trait{grid-template-columns:52px 1fr}}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="glow-cursor" id="glow"></div>
-<div class="progress" id="progress"></div>
+<div class="wrap">
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="#top">Santhosh Bommasamudram</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="nav-cta">Let's talk</a>
+    </div>
+  </nav>
 
-<header class="nav" id="nav">
-<div class="nav-in wrap">
-<a class="brand" href="#"><span class="mark">S</span><span>Santhosh Bommasamudram</span></a>
-<nav class="links">
-<a href="#about" data-sec="about">About</a><a href="#experience" data-sec="experience">Experience</a><a href="#leadership" data-sec="leadership">Leadership</a><a href="#projects" data-sec="projects">Projects</a><a href="#product" data-sec="product">Product</a><a href="#skills" data-sec="skills">Skills</a><a href="#contact" class="cta">Let's talk ↗</a>
-</nav>
-<button class="menu" id="menu">Menu</button>
-</div>
-</header>
-
-<main id="main">
-<section class="hero wrap">
-<div class="reveal">
-<span class="pill"><i class="dot"></i> Product-minded · technical · curious</span>
-<h1><span class="line"><span>Building products from</span></span><span class="line"><span><em>problem to prototype.</em></span></span></h1>
-<p class="lead">I'm Santhosh - a Computer Science graduate who enjoys product discovery, strategy, AI and actually turning ideas into working things.</p>
-<div class="actions">
-<a class="btn primary" href="#projects">See selected work ↓</a>
-<a class="btn secondary" href="https://drive.google.com/file/d/1Pt6b8JiQLP75TA7vhtu1APckRR7IaLZA/view?usp=sharing" target="_blank">Resume</a>
-<a class="btn secondary" href="mailto:work.santhosh18@gmail.com">Email me ↗</a>
-<a class="btn secondary" href="https://www.linkedin.com/in/santhosh12/" target="_blank">LinkedIn ↗</a>
-</div>
-<div class="meta"><span>Product Discovery</span><span>Product Strategy</span><span>AI / ML</span><span>Technical Execution</span></div>
-</div>
-<div class="hero-art reveal">
-<div class="avatar"><img src="photo.jpg" alt="Santhosh Bommasamudram" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback">SB</span></div>
-<div class="grid-orb"></div>
-<div class="note"><small>Status</small><strong>Open to APM, Product roles and internships</strong></div>
-<div class="scroll-cue"><span class="bar"></span>Scroll</div>
-</div>
-</section>
-
-<section class="section" id="about"><div class="wrap">
-<div class="head reveal"><div><div class="kicker">01 / About</div><h2 class="section-title">Technical enough to build. <em>Product enough to ask why.</em></h2></div><p class="intro">My sweet spot sits between users, product decisions and engineering constraints.</p></div>
-<div class="about">
-<div class="reveal"><p class="about-lead">I like starting with the <strong>problem</strong>, not the feature.</p><p class="about-copy">Product focused builder with experience across AI, consumer products, and startup initiatives. I turn ambiguous problems into product ideas, MVPs, PRDs, and GTM experiments, combining customer thinking with hands-on execution across product, design, and automation.</p></div>
-<div class="cards reveal">
-<article class="card"><span class="num">01</span><h3>Product discovery</h3><p>Frame problems, understand users, ask better questions and turn ambiguity into direction.</p></article>
-<article class="card"><span class="num">02</span><h3>Strategy & prioritisation</h3><p>Think through goals, requirements, GTM and what deserves attention first.</p></article>
-<article class="card"><span class="num">03</span><h3>Technical execution</h3><p>Build prototypes and understand APIs, AI systems, retrieval and engineering constraints.</p></article>
-<article class="card"><span class="num">04</span><h3>Leadership & storytelling</h3><p>Communicate clearly, run creative teams and turn ideas into work people can rally behind.</p></article>
-</div></div></div></section>
-
-<section class="section" id="experience"><div class="wrap">
-<div class="head reveal"><div><div class="kicker">02 / Experience</div><h2 class="section-title">Where I've practiced <em>product on the ground.</em></h2></div><p class="intro">Hands-on exposure to product, business and execution inside a founding team.</p></div>
-<div class="timeline reveal">
-<article class="job"><div class="date">—</div><div><h3>Founder's Office</h3><div class="org">Skaverse Pvt. Ltd.</div><ul><li>Worked closely with the founding team across product development, business, marketing and execution initiatives.</li><li>Contributed to product development through Figma based design and product ideation, translating concepts into user facing experiences.</li><li>Helped structuring pitch deck narratives, value propositions and key business information for external communication.</li><li>Supported product promotion and organized a gaming event to drive audience engagement and visibility.</li></ul></div><div class="type">Founder's Office</div></article>
-</div></div></section>
-
-<section class="section" id="leadership"><div class="wrap">
-<div class="head reveal"><div><div class="kicker">03 / Leadership</div><h2 class="section-title">Experience that taught me to <em>own things.</em></h2></div><p class="intro">Leadership in media and creative communities.</p></div>
-<div class="timeline reveal">
-<article class="job"><div class="date">2023 — 2026</div><div><h3>PR Team → Joint Secretary → Secretary</h3><div class="org">Media Council · IIIT Ranchi</div><ul><li>Managed institute media content and contributed to audience growth across platforms, gaining followers.</li></ul></div><div class="type">Leadership</div></article>
-<article class="job"><div class="date">2024 — 2026</div><div><h3>Vice Head → Head</h3><div class="org">Photography Club · Piccell</div><ul><li>Redesigned event formats using member feedback, contributed to significant membership growth.</li></ul></div><div class="type">Leadership</div></article>
-</div></div></section>
-
-
-<section class="section" id="projects">
-  <div class="wrap">
-
-    <div class="head reveal">
+  <main id="top">
+    <section class="hero">
       <div>
-        <div class="kicker">04 / Selected work</div>
-        <h2 class="section-title">Projects where I <em>build and think.</em></h2>
+        <div class="eyebrow">Product · AI · Execution</div>
+        <h1>I like turning messy problems into <em>useful things.</em></h1>
+        <p class="hero-copy">I’m Santhosh, a product-minded builder who likes getting close to the problem, figuring out what actually matters, and then shipping something people can use.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">See my work ↗</a>
+          <a class="button button-secondary" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-meta">
+          <span>Product & strategy</span><span>AI / automation</span><span>Technical execution</span>
+        </div>
       </div>
-      <p class="intro">Product thinking backed by technical execution.</p>
-    </div>
-
-    <div class="projects">
-
-      <!-- PROJECT 01 -->
-      <article class="project feature reveal">
-        <div class="project-top">
-          <div>
-            <div class="label">01 · AI Product Development</div>
-            <h3>SpecLens</h3>
-          </div>
-          <span class="status">Featured</span>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <img src="photo.jpg" alt="Portrait of Santhosh Bommasamudram" onerror="this.style.display='none'">
+          <div class="photo-caption"><span>Building at the intersection of product & tech</span><span>01</span></div>
         </div>
+      </div>
+    </section>
 
-        <p class="desc">
-          An AI-assisted product discovery tool that turns an early product idea
-          into a structured, reviewable product specification.
-        </p>
-
-        <ul>
-          <li>
-            Designed a guided discovery flow that asks focused follow-up questions
-            to clarify users, problems, goals and requirements.
-          </li>
-          <li>
-            Built structured product states covering requirements, user stories
-            and acceptance criteria.
-          </li>
-          <li>
-            Added PRD generation and automated critique to identify gaps and
-            improve specification quality before development.
-          </li>
-        </ul>
-
-        <div class="tags">
-          <span>FastAPI</span>
-          <span>Next.js</span>
-          <span>TypeScript</span>
-          <span>Ollama</span>
-          <span>Qwen3</span>
-          <span>Pydantic</span>
+    <section class="section" id="about">
+      <div class="section-head">
+        <div><div class="kicker">A bit about me</div><h2 class="section-title">Curious first. Practical second.</h2></div>
+        <p class="section-intro">I’m interested in products where the hard part is not writing the feature list, but understanding the person and the problem behind it.</p>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p class="about-lead">I enjoy the uncomfortable middle: ambiguous problems, half-formed ideas, and figuring out what to build before anyone asks for it.</p>
+          <p class="about-copy">My work usually sits between product thinking and actually making the thing. That means research, flows, metrics, prototypes, APIs, automation, and plenty of iteration until the idea feels simple on the other side.</p>
         </div>
+        <div class="traits">
+          <div class="trait"><small>01</small><div><strong>Start with the problem</strong><p>Understand the user, the context and the real constraint before jumping to a solution.</p></div></div>
+          <div class="trait"><small>02</small><div><strong>Make ideas tangible</strong><p>Turn fuzzy thinking into flows, prototypes and working experiments quickly.</p></div></div>
+          <div class="trait"><small>03</small><div><strong>Care about outcomes</strong><p>Use adoption, behavior and feedback to decide what deserves another iteration.</p></div></div>
+          <div class="trait"><small>04</small><div><strong>Keep learning by shipping</strong><p>I learn fastest when there is a real user, a real constraint and something to improve.</p></div></div>
+        </div>
+      </div>
+    </section>
 
-       <div class="project-links">
+    <section class="section" id="projects">
+      <div class="section-head">
+        <div><div class="kicker">Selected work</div><h2 class="section-title">Things I’ve built.</h2></div>
+        <p class="section-intro">A few projects that show how I think, build and work through ambiguity.</p>
+      </div>
+      <div class="projects">
+        <article class="project feature">
+          <div class="project-top"><span class="project-type">Product · AI · Research</span><span class="project-year">2026</span></div>
+          <h3>SpecLens</h3>
+          <p>A prototype generator designed to make the jump from a product idea to a testable interface much faster.</p>
+          <div class="project-result"><b>Focus:</b> reducing the friction between problem framing, product decisions and usable prototypes.</div>
+          <div class="tags"><span>Product discovery</span><span>AI</span><span>Prototyping</span><span>Experimentation</span></div>
+          <a class="project-link" href="https://github.com/Santhosh1108/speclens" target="_blank" rel="noreferrer">View project ↗</a>
+        </article>
+        <article class="project">
+          <div class="project-top"><span class="project-type">Product tool</span><span class="project-year">2026</span></div>
+          <h3>Flow Board</h3>
+          <p>A lightweight PM workspace for turning work into visible, manageable flows instead of another overloaded dashboard.</p>
+          <div class="tags"><span>Product management</span><span>UX</span><span>Workflow</span></div>
+          <a class="project-link" href="https://github.com/Santhosh1108/Flow-Board_PM_Tool" target="_blank" rel="noreferrer">View project ↗</a>
+        </article>
+        <article class="project">
+          <div class="project-top"><span class="project-type">Automation</span><span class="project-year">2026</span></div>
+          <h3>Lead Generation Automation</h3>
+          <p>An experiment in reducing repetitive prospecting work with a more structured, automated workflow.</p>
+          <div class="tags"><span>Automation</span><span>AI</span><span>Operations</span></div>
+          <a class="project-link" href="https://github.com/Santhosh1108/lead-generation-automation" target="_blank" rel="noreferrer">View project ↗</a>
+        </article>
+        <article class="project">
+          <div class="project-top"><span class="project-type">Analytics</span><span class="project-year">2026</span></div>
+          <h3>Instagram Content Performance Analyzer</h3>
+          <p>A small analytics project exploring how content signals can be turned into clearer performance insights.</p>
+          <div class="tags"><span>Analytics</span><span>Data</span><span>Product insights</span></div>
+          <a class="project-link" href="https://github.com/Santhosh1108/Instagram-Content-Performance-Analyzer" target="_blank" rel="noreferrer">View project ↗</a>
+        </article>
+      </div>
+    </section>
 
-  <a href="https://speclens-delta.vercel.app/" target="_blank">
-    Live Link ↗
-  </a>
+    <section class="section" id="work">
+      <div class="section-head">
+        <div><div class="kicker">Experience</div><h2 class="section-title">A few places I’ve worked.</h2></div>
+        <p class="section-intro">Less job-title theatre, more context on what I actually worked on.</p>
+      </div>
+      <div class="experience">
+        <div class="role"><div class="role-date">2025 — Present</div><div><h3>Product / AI Work</h3><div class="role-org">Independent projects</div><p>Building and testing product ideas across AI, automation, analytics and lightweight developer tools.</p></div><div class="role-type">Product</div></div>
+        <div class="role"><div class="role-date">Recent</div><div><h3>Product & Operations</h3><div class="role-org">Skiaverse Pvt. Ltd.</div><p>Worked across problem discovery, execution and operational workflows, with a bias toward measurable outcomes.</p></div><div class="role-type">Execution</div></div>
+        <div class="role"><div class="role-date">Earlier</div><div><h3>Projects & Experiments</h3><div class="role-org">Independent</div><p>Built software, automation and data projects to learn by doing and explore different product problems.</p></div><div class="role-type">Builder</div></div>
+      </div>
+    </section>
 
-  <a href="https://drive.google.com/file/d/1-tIJ4chCtNxJ23byg10WU7JDd2jOONla/view?usp=sharing" target="_blank">
-    Case Study ↗
-  </a>
+    <section class="section">
+      <div class="section-head"><div><div class="kicker">How I work</div><h2 class="section-title">Useful across the stack.</h2></div><p class="section-intro">I’m at my best when product thinking and making are close together.</p></div>
+      <div class="skills">
+        <div class="skill"><div class="skill-num">01</div><h3>Product thinking</h3><p>Problem framing, user journeys, prioritization, metrics, experimentation and product strategy.</p></div>
+        <div class="skill"><div class="skill-num">02</div><h3>AI & automation</h3><p>Using AI where it removes real friction, from workflows and analysis to rapid product prototyping.</p></div>
+        <div class="skill"><div class="skill-num">03</div><h3>Build & iterate</h3><p>Comfortable moving from wireframes and specs into APIs, prototypes, data and working interfaces.</p></div>
+      </div>
+    </section>
 
-  <a href="https://github.com/Santhosh1108/speclens" target="_blank">
-    GitHub ↗
-  </a>
+    <section class="contact" id="contact">
+      <div><div class="kicker">Say hello</div><h2>Have a problem worth <em>figuring out?</em></h2></div>
+      <div class="contact-side">I’m always more interested in a useful conversation than a perfectly written intro.<br><a href="mailto:santhoshbommasamudram@gmail.com">santhoshbommasamudram@gmail.com ↗</a></div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <span>© 2026 Santhosh Bommasamudram</span>
+    <div class="footer-links"><a href="https://github.com/Santhosh1108" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></div>
+  </footer>
 </div>
-      </article>
-
-<article class="project reveal">
-  <div class="project-top">
-    <div>
-      <div class="label">Product Workflow</div>
-      <h3>LinkedIn Conversation Tagger</h3>
-    </div>
-    <span class="status">Live</span>
-  </div>
-
-  <p class="desc">
-    A product concept that helps users organize LinkedIn conversations
-    using meaningful tags and makes important conversations easier to find.
-  </p>
-
-  <ul>
-    <li>Identified the problem of important conversations getting buried in an unstructured inbox.</li>
-    <li>Designed tags and workflows for leads, recruiters, follow-ups and networking conversations.</li>
-    <li>Built an interactive prototype to demonstrate the product experience.</li>
-  </ul>
-
-  <div class="tags">
-    <span>Product Discovery</span>
-    <span>PRD</span>
-    <span>Workflow Design</span>
-    <span>Prototype</span>
-  </div>
-
-  <div class="project-links">
-    <a href="https://linked-chat-labeler.lovable.app/" target="_blank">
-      Live Prototype ↗
-    </a>
-
-    <a href="https://drive.google.com/file/d/16fcjSYLEJ_-yPgx_OyVIYalIyDHTCe6_/view?usp=sharing" target="_blank">
-      Case Study ↗
-    </a>
-  </div>
-</article>
-
-      <!-- PROJECT 02 -->
-      <article class="project reveal">
-        <div class="project-top">
-          <div>
-            <div class="label">02 · RAG / Document Intelligence</div>
-            <h3>AI Support Agent</h3>
-          </div>
-          <span class="status">Live</span>
-        </div>
-
-        <p class="desc">
-          A multi-document AI support application built to answer questions
-          from uploaded PDFs with grounded, page-level citations.
-        </p>
-
-        <ul>
-          <li>
-            Built semantic retrieval using Sentence Transformers and FAISS
-            to find relevant information across documents.
-          </li>
-          <li>
-            Added recursive chunking, cached vector indexing and streaming
-            responses for a faster user experience.
-          </li>
-          <li>
-            Designed the product around traceable answers rather than
-            unsupported AI responses.
-          </li>
-        </ul>
-
-        <div class="tags">
-          <span>Python</span>
-          <span>FAISS</span>
-          <span>RAG</span>
-          <span>Groq</span>
-          <span>Llama 3</span>
-          <span>Streamlit</span>
-        </div>
-
-        <div class="project-links">
-          <a href="https://github.com/Santhosh1108/InsightPDF" target="_blank">
-            GitHub ↗
-          </a>
-        </div>
-      </article>
-
-
-      <!-- PROJECT 03 -->
-      <article class="project reveal">
-        <div class="project-top">
-          <div>
-            <div class="label">03 · NLP / Model Evaluation</div>
-            <h3>AI Sentiment Analysis</h3>
-          </div>
-          <span class="status">Live</span>
-        </div>
-
-        <p class="desc">
-          A sentiment classification application comparing traditional
-          machine learning with modern Transformer models on SST-2.
-        </p>
-
-        <ul>
-          <li>
-            Evaluated Logistic Regression, Naive Bayes, BERT, DistilBERT
-            and RoBERTa across the same classification task.
-          </li>
-          <li>
-            Compared accuracy, precision, recall and F1-score to understand
-            model trade-offs rather than relying on a single metric.
-          </li>
-          <li>
-            Built an interactive interface with confidence scoring to make
-            model behaviour easier to inspect.
-          </li>
-        </ul>
-
-        <div class="tags">
-          <span>Python</span>
-          <span>Machine Learning</span>
-          <span>BERT</span>
-          <span>RoBERTa</span>
-          <span>Streamlit</span>
-        </div>
-
-        <div class="project-links">
-          <a href="https://github.com/Santhosh1108/sentiment-analysis-ai" target="_blank">
-            GitHub ↗
-          </a>
-        </div>
-      </article>
-
-
-      <!-- PROJECT 04 -->
-     <article class="project reveal">
-  <div class="project-top">
-    <div>
-      <div class="label">04 · Lead Generation Automation</div>
-      <h3>Interior Procurement Intelligence</h3>
-    </div>
-    <span class="status">Built</span>
-  </div>
-
-  <p class="desc">
-    A procurement automation workflow that discovers and prioritizes
-    interior-material suppliers across Bengaluru using n8n, SerpAPI
-    and Google Sheets.
-  </p>
-
-  <ul>
-    <li>
-      Automated supplier discovery across plywood, MDF, HDHMR,
-      laminates and interior hardware.
-    </li>
-    <li>
-      Cleaned and deduplicated Google Maps results while handling
-      missing contact information.
-    </li>
-    <li>
-      Built a supplier scoring model using rating, review volume,
-      category fit, phone and website availability.
-    </li>
-    <li>
-      Structured qualified suppliers into a reusable procurement CRM
-      for faster sourcing decisions.
-    </li>
-  </ul>
-
-  <div class="tags">
-    <span>n8n</span>
-    <span>SerpAPI</span>
-    <span>Google Maps</span>
-    <span>Google Sheets</span>
-    <span>JavaScript</span>
-    <span>Automation</span>
-  </div>
-
-  <div class="project-links">
-    <a
-      href="https://github.com/Santhosh1108/lead-generation-automation"
-      target="_blank"
-    >
-      GitHub ↗
-    </a>
-  </div>
-</article>
-
-    </div>
-  </div>
-</section>
-
-<section class="section" id="product"><div class="wrap">
-<div class="head reveal"><div><div class="kicker">05 / Product portfolio</div><h2 class="section-title">I also practice product <em>without waiting for a job title.</em></h2></div><p class="intro">PRDs and product work focused on problem definition, workflows and decisions.</p></div>
-<div class="work reveal">
-<a href="https://www.notion.so/" target="_blank"><div><strong>PRD — Docs Review Status</strong><small>Product specification · Notion</small></div><span class="arrow">↗</span></a>
-<a href="https://www.notion.so/" target="_blank"><div><strong>PRD — LinkedIn Conversation Tagger</strong><small>Product specification · Notion</small></div><span class="arrow">↗</span></a>
-</div></div></section>
-
-<section class="section" id="skills"><div class="wrap">
-<div class="head reveal"><div><div class="kicker">06 / Toolkit</div><h2 class="section-title">The stack behind the <em>thinking.</em></h2></div><p class="intro">Skills and tools taken directly from my current resume.</p></div>
-<div class="skills">
-<div class="skill reveal"><h3><span>01</span> Product</h3><div class="chips"><span class="chip">Product Discovery</span><span class="chip">Product Strategy</span><span class="chip">User Research</span><span class="chip">PRD Writing</span><span class="chip">Prioritization</span><span class="chip">GTM Strategy</span><span class="chip">Agile</span></div></div>
-<div class="skill reveal"><h3><span>02</span> Technical</h3><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">APIs</span><span class="chip">Git</span><span class="chip">RAG</span><span class="chip">Prompt Engineering</span><span class="chip">Machine Learning</span><span class="chip">FastAPI</span><span class="chip">Next.js</span></div></div>
-<div class="skill reveal"><h3><span>03</span> Tools</h3><div class="chips"><span class="chip">Figma</span><span class="chip">Jira</span><span class="chip">Notion</span><span class="chip">Excel</span><span class="chip">Canva</span><span class="chip">GitHub</span><span class="chip">Ollama</span></div></div>
-</div></div></section>
-
-<section class="section" id="education"><div class="wrap">
-<div class="head reveal"><div><div class="kicker">07 / Education</div><h2 class="section-title">Computer Science, with a <em>product bias.</em></h2></div></div>
-<div class="edu"><div class="degree reveal"><div class="mini">2022 — 2026</div><h3>B.Tech in Computer Science and Engineering</h3><p>Indian Institute of Information Technology, Ranchi</p><p style="margin-top:8px;color:var(--soft)"></p></div>
-<div class="certs reveal">
-<div class="cert"><div><strong>Product Management Basics</strong><small>Pendo</small></div><a href="https://www.credly.com/badges/13c14de6-4ebb-4c76-8521-527670a6b97e/public_url" target="_blank">Credential ↗</a></div>
-<div class="cert"><div><strong>Technical Product Management</strong><small>Udemy</small></div><a href="https://www.udemy.com/certificate/UC-caf67e58-318b-4b74-893b-240a029e090f/" target="_blank">Credential ↗</a></div>
-<div class="cert"><div><strong>Executive Diploma In Strategic Management & Sales</strong><small>Udemy</small></div><a href="https://www.udemy.com/certificate/UC-9488c980-2bac-451c-8465-4542a5f7cc13/" target="_blank">Credential ↗</a></div>
-</div></div></div></section>
-
-<section class="contact" id="contact"><div class="wrap reveal">
-<span class="pill"><i class="dot"></i> Open to APM, Product roles and Internships</span>
-<h2>Have a hard problem? <em>Let's talk.</em></h2>
-<p>I'm interested in Associate Product Manager roles, Product Management positions and internships where I can combine product thinking, technical context and execution.</p>
-<div class="actions"><a class="btn primary" href="mailto:work.santhosh18@gmail.com">work.santhosh18@gmail.com ↗</a></div>
-<div class="contact-links"><a href="https://www.linkedin.com/in/santhosh12/" target="_blank">LinkedIn</a><a href="https://github.com/Santhosh1108" target="_blank">GitHub</a>
-</div></section>
-</main>
-
-<footer><div class="foot wrap"><span>© 2026 Santhosh Bommasamudram</span><span>Product · AI · Execution</span></div></footer>
-
-<script>
-const nav=document.getElementById("nav"),menu=document.getElementById("menu"),progress=document.getElementById("progress"),glow=document.getElementById("glow");
-const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-addEventListener("scroll",()=>{
-  nav.classList.toggle("scrolled",scrollY>18);
-  const h=document.documentElement;
-  const pct=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
-  progress.style.width=pct+"%";
-},{passive:true});
-
-menu.addEventListener("click",()=>{const open=nav.classList.toggle("open");menu.textContent=open?"Close":"Menu"});
-document.querySelectorAll(".links a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");menu.textContent="Menu"}));
-
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll(".reveal").forEach(e=>obs.observe(e));
-
-const navLinks=[...document.querySelectorAll(".links a[data-sec]")];
-const sections=navLinks.map(a=>document.getElementById(a.dataset.sec)).filter(Boolean);
-const secObs=new IntersectionObserver(es=>es.forEach(e=>{
-  const link=navLinks.find(a=>a.dataset.sec===e.target.id);
-  if(link) link.classList.toggle("active",e.isIntersecting);
-}),{rootMargin:"-45% 0px -50% 0px"});
-sections.forEach(s=>secObs.observe(s));
-
-if(!reduced && matchMedia("(hover:hover)").matches){
-  addEventListener("mousemove",e=>{
-    glow.style.left=e.clientX+"px";
-    glow.style.top=e.clientY+"px";
-  },{passive:true});
-  document.querySelectorAll(".card").forEach(card=>{
-    card.addEventListener("mousemove",e=>{
-      const r=card.getBoundingClientRect();
-      card.style.setProperty("--mx",(e.clientX-r.left)+"px");
-      card.style.setProperty("--my",(e.clientY-r.top)+"px");
-    });
-  });
-  const orb=document.querySelector(".grid-orb");
-  if(orb){
-    addEventListener("mousemove",e=>{
-      const x=(e.clientX/innerWidth-.5)*14;
-      const y=(e.clientY/innerHeight-.5)*14;
-      orb.style.transform=`rotate(16deg) translate(${x}px,${y}px)`;
-    },{passive:true});
-  }
-}
-</script>
 </body>
 </html>
