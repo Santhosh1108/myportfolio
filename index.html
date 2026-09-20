@@ -1,900 +1,616 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-          "on-surface-variant": "#444557",
-          "surface-container": "#efedf1",
-          "inverse-on-surface": "#f2f0f4",
-          "surface-bright": "#faf9fd",
-          "on-primary-fixed": "#000569",
-          "surface": "#faf9fd",
-          "secondary-fixed-dim": "#b0d500",
-          "on-error-container": "#93000a",
-          "on-secondary-fixed-variant": "#3e4c00",
-          "on-primary-container": "#c2c6ff",
-          "primary-fixed-dim": "#bec2ff",
-          "surface-container-lowest": "#ffffff",
-          "on-secondary-fixed": "#171e00",
-          "inverse-primary": "#bec2ff",
-          "on-tertiary": "#ffffff",
-          "background": "#faf9fd",
-          "surface-variant": "#e3e2e6",
-          "tertiary-fixed-dim": "#ffb4a2",
-          "on-primary": "#ffffff",
-          "primary-fixed": "#e0e0ff",
-          "tertiary-fixed": "#ffdad2",
-          "tertiary-container": "#a42300",
-          "on-tertiary-container": "#ffbaa9",
-          "tertiary": "#7a1800",
-          "on-background": "#1b1b1f",
-          "on-primary-fixed-variant": "#0015e6",
-          "inverse-surface": "#2f3034",
-          "primary": "#0011cd",
-          "secondary-container": "#c7ef00",
-          "error-container": "#ffdad6",
-          "surface-container-low": "#f5f3f7",
-          "secondary-fixed": "#caf300",
-          "primary-container": "#1a2bfe",
-          "on-surface": "#1b1b1f",
-          "surface-container-highest": "#e3e2e6",
-          "secondary": "#536600",
-          "on-secondary": "#ffffff",
-          "surface-container-high": "#e9e7ec",
-          "on-tertiary-fixed-variant": "#8a1c00",
-          "surface-dim": "#dbd9dd",
-          "outline-variant": "#c5c5da",
-          "on-error": "#ffffff",
-          "on-tertiary-fixed": "#3c0700",
-          "outline": "#757589",
-          "surface-tint": "#2f3eff",
-          "on-secondary-container": "#576a00",
-          "error": "#ba1a1a"
-        },
-        "borderRadius": {
-          "DEFAULT": "0.125rem",
-          "lg": "0.25rem",
-          "xl": "0.5rem",
-          "full": "0.75rem"
-        },
-        "spacing": {
-          "space-md": "1rem",
-          "margin-mobile": "1rem",
-          "space-xl": "2.5rem",
-          "gutter": "1.5rem",
-          "margin": "2.5rem",
-          "space-sm": "0.5rem",
-          "space-xs": "0.25rem",
-          "space-lg": "1.5rem",
-          "gutter-mobile": "1rem"
-        },
-        "fontFamily": {
-          "headline-sm": [
-            "Space Grotesk"
-          ],
-          "body-md": [
-            "Work Sans"
-          ],
-          "body-lg": [
-            "Work Sans"
-          ],
-          "display-hero": [
-            "Space Grotesk"
-          ],
-          "headline-lg-mobile": [
-            "Space Grotesk"
-          ],
-          "headline-lg": [
-            "Space Grotesk"
-          ],
-          "label-md": [
-            "JetBrains Mono"
-          ],
-          "label-sm": [
-            "JetBrains Mono"
-          ],
-          "display-hero-mobile": [
-            "Space Grotesk"
-          ],
-          "body-sm": [
-            "Work Sans"
-          ],
-          "headline-md": [
-            "Space Grotesk"
-          ]
-        },
-        "fontSize": {
-          "headline-sm": [
-            "18px",
-            {
-              "lineHeight": "24px",
-              "fontWeight": "600"
-            }
-          ],
-          "body-md": [
-            "14px",
-            {
-              "lineHeight": "20px",
-              "fontWeight": "400"
-            }
-          ],
-          "body-lg": [
-            "16px",
-            {
-              "lineHeight": "24px",
-              "fontWeight": "400"
-            }
-          ],
-          "display-hero": [
-            "64px",
-            {
-              "lineHeight": "68px",
-              "letterSpacing": "-0.04em",
-              "fontWeight": "700"
-            }
-          ],
-          "headline-lg-mobile": [
-            "28px",
-            {
-              "lineHeight": "34px",
-              "letterSpacing": "-0.02em",
-              "fontWeight": "700"
-            }
-          ],
-          "headline-lg": [
-            "36px",
-            {
-              "lineHeight": "42px",
-              "letterSpacing": "-0.02em",
-              "fontWeight": "700"
-            }
-          ],
-          "label-md": [
-            "13px",
-            {
-              "lineHeight": "18px",
-              "letterSpacing": "0.02em",
-              "fontWeight": "500"
-            }
-          ],
-          "label-sm": [
-            "11px",
-            {
-              "lineHeight": "14px",
-              "letterSpacing": "0.04em",
-              "fontWeight": "600"
-            }
-          ],
-          "display-hero-mobile": [
-            "40px",
-            {
-              "lineHeight": "44px",
-              "letterSpacing": "-0.03em",
-              "fontWeight": "700"
-            }
-          ],
-          "body-sm": [
-            "12px",
-            {
-              "lineHeight": "16px",
-              "fontWeight": "400"
-            }
-          ],
-          "headline-md": [
-            "24px",
-            {
-              "lineHeight": "30px",
-              "letterSpacing": "-0.01em",
-              "fontWeight": "600"
-            }
-          ]
-        }
-      },
-    },
-  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_2px_0px_#1b1b1f]"><div class="h-20 max-w-7xl mx-auto px-gutter-mobile lg:px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-xs" data-path="work-proof" href="#"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">SANTHOSH</span><span class="font-label-sm text-label-sm text-primary px-space-xs py-0.5 bg-primary-fixed rounded-sm">[01]</span></a><div class="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded-sm shadow-[1.5px_1.5px_0px_#1b1b1f] rotate-[-1deg]"><span class="material-symbols-outlined text-[14px]">bolt</span><span class="font-label-sm text-label-sm uppercase">OPEN FOR APM/PM</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-1 bg-surface-container rounded-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-sm"><a class="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="work-proof" href="#">Work / Proof</a><a class="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="chaos-logic" href="#">The Chaos &amp; Logic</a><a class="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiments" href="#">Experiments</a><a class="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="manifesto" href="#">Manifesto</a><a class="px-3 py-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="transmission-contact" href="#">Transmission / Contact</a></nav><div class="flex items-center gap-space-sm"><a class="flex items-center gap-1.5 px-3 py-1.5 bg-primary-container text-on-primary rounded-sm shadow-[2px_2px_0px_#1b1b1f] hover:bg-primary transition-all active:translate-x-0.5 active:translate-y-0.5" data-path="transmission-contact" href="#"><span class="font-label-sm text-label-sm uppercase tracking-wide">[ TALK PRODUCT ↗ ]</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
-<!-- Top Ambient Banner / Notification Wire -->
-<div class="w-full bg-secondary-container text-on-secondary-container py-2 px-gutter-mobile lg:px-gutter shadow-[0_2px_0px_#1b1b1f] flex flex-wrap items-center justify-between gap-2 overflow-hidden">
-<div class="flex items-center gap-2 font-label-sm text-label-sm tracking-widest uppercase">
-<span class="inline-block w-2 h-2 rounded-full bg-primary animate-ping"></span>
-<span class="font-bold">[ APM / PM RADAR ACTIVE ]</span>
-<span class="hidden md:inline text-on-secondary-variant font-medium">// OPEN FOR FULL-TIME PRODUCT ROLES (2025/2026 CYCLE)</span>
-</div>
-<div class="flex items-center gap-3 font-label-sm text-label-sm">
-<span class="bg-surface px-2 py-0.5 rounded shadow-[1px_1px_0px_#1b1b1f] text-on-surface">LOC: BANGALORE / HYBRID</span>
-<a class="underline font-bold hover:text-primary transition-colors" href="mailto:work.santhosh18@gmail.com">DIRECT TRANSMISSION ↗</a>
-</div>
-</div>
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Sora:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#e5e2e1","primary":"#ddb7ff","on-secondary-fixed-variant":"#6500b8","surface-dim":"#131313","on-tertiary-fixed":"#281900","surface-container-lowest":"#0e0e0e","surface-container-high":"#2a2a2a","on-secondary-container":"#e2c6ff","error":"#ffb4ab","surface-container":"#201f1f","tertiary-container":"#bd871a","primary-container":"#b76dff","tertiary":"#fabc4e","error-container":"#93000a","surface-container-low":"#1c1b1b","surface-bright":"#3a3939","on-tertiary-fixed-variant":"#604100","on-tertiary":"#432c00","on-surface-variant":"#cfc2d6","on-primary-fixed":"#2c0051","on-error":"#690005","on-background":"#e5e2e1","primary-fixed-dim":"#ddb7ff","surface-variant":"#353534","surface-container-highest":"#353534","on-primary":"#490080","outline":"#988d9f","primary-fixed":"#f0dbff","on-primary-container":"#400071","tertiary-fixed":"#ffdead","inverse-primary":"#842bd2","secondary-container":"#7e03e3","surface-tint":"#ddb7ff","outline-variant":"#4d4354","secondary-fixed-dim":"#dab9ff","secondary-fixed":"#eedbff","on-secondary":"#470084","on-error-container":"#ffdad6","surface":"#131313","inverse-surface":"#e5e2e1","secondary":"#dab9ff","on-secondary-fixed":"#2a0053","on-tertiary-container":"#3a2600","on-primary-fixed-variant":"#6900b3","background":"#131313","tertiary-fixed-dim":"#fabc4e","inverse-on-surface":"#313030"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-desktop":"3rem","gutter-desktop":"2rem","space-sm":"0.5rem","space-2xl":"4rem","space-md":"1rem",margin:"1.25rem","space-xs":"0.25rem","space-3xl":"6rem","space-xl":"2.5rem","space-lg":"1.5rem",gutter:"1.5rem"},fontFamily:{"headline-lg":["Sora"],"display-xl":["Sora"],"label-mono-sm":["JetBrains Mono"],"label-ui":["Sora"],"body-lg":["Sora"],"headline-md":["Sora"],"display-xl-mobile":["Sora"],"headline-sm":["Sora"],"headline-lg-mobile":["Sora"],"label-mono":["JetBrains Mono"],"body-md":["Sora"],"body-sm":["Sora"]},fontSize:{"headline-lg":["44px",{lineHeight:"52px",letterSpacing:"-0.03em",fontWeight:"600"}],"display-xl":["72px",{lineHeight:"76px",letterSpacing:"-0.04em",fontWeight:"700"}],"label-mono-sm":["11px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"400"}],"label-ui":["14px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"display-xl-mobile":["40px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-lg-mobile":["28px",{lineHeight:"34px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-mono":["12px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"500"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/30"><div class="h-20 max-w-[1320px] mx-auto px-margin lg:px-margin-desktop flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="portfolio" href="#"><span class="font-label-ui text-label-ui text-on-surface tracking-tight group-hover:text-primary transition-colors">Santhosh Bommasamudram</span><span class="font-label-mono-sm text-label-mono-sm text-outline px-space-xs py-0.5 rounded bg-surface-container border border-outline-variant/40">PRODUCT</span></a><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold"><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="portfolio" href="#">Portfolio</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#">Services</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="technologies" href="#">Technologies</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="hire-me" href="#">Hire me</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center gap-space-xs bg-primary text-on-primary font-label-ui text-label-ui px-space-md py-space-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-all duration-200 shadow-[0_0_20px_rgba(183,109,255,0.25)]" data-path="hire-me" href="#"><span class="font-label-ui text-label-ui text-on-primary">Hire me</span><span class="font-label-mono text-label-mono text-on-primary">→</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full relative overflow-hidden bg-[#0a0a0a] text-[#f5f5f5] selection:bg-primary selection:text-on-primary">
+<!-- Interactive Cursor Glow Spotlight -->
+<div class="pointer-events-none fixed -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] rounded-full bg-primary/10 blur-[90px] transition-transform duration-75 z-40" id="cursor-glow"></div>
+<!-- Ambient Top Atmosphere Glow -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[640px] bg-gradient-to-b from-primary/15 via-primary/5 to-transparent blur-[140px] pointer-events-none"></div>
 <!-- HERO SECTION -->
-<section class="relative w-full py-12 lg:py-20 px-gutter-mobile lg:px-gutter max-w-7xl mx-auto flex flex-col gap-12">
-<!-- Editorial Issue Header Badge -->
-<div class="flex flex-wrap items-center justify-between gap-4 border-b-2 border-on-surface pb-4">
-<div class="flex items-center gap-3">
-<span class="px-3 py-1 bg-primary text-on-primary font-label-md text-label-md rounded shadow-[2px_2px_0px_#1b1b1f] -rotate-1 tracking-wider uppercase">ISSUE #01 // 2026 EDITION</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant tracking-tight uppercase">[ ORIGIN STORY &amp; VERIFIABLE PROOF ]</span>
-</div>
-<div class="hidden sm:flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
-<span>FRAMEWORK: EMPIRICAL PRODUCT OPS</span>
-<span>•</span>
-<span class="text-primary font-semibold">NO SPECULATIVE JIRA</span>
-</div>
-</div>
-<!-- Main Hero Statement -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<div class="lg:col-span-8 flex flex-col gap-6">
-<div class="inline-flex self-start items-center gap-2 px-3 py-1 bg-surface-container-high rounded shadow-[2px_2px_0px_#1b1b1f] font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
-<span>SYSTEM DISCOVERY // PRODUCT STRATEGY // CODE</span>
-</div>
-<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero tracking-tight text-on-surface uppercase">
-          I turn messy problems into <span class="bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded shadow-[3px_3px_0px_#1b1b1f] inline-block -rotate-1">products</span> worth shipping.
-        </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-          I'm <strong class="text-on-surface font-semibold">Santhosh Bommasamudram</strong> — Computer Science graduate &amp; product builder who treats product discovery like an investigative mystery. I start with the hard friction, make trade-offs loud and explicit, prototype before arguing, and write code when it's the fastest path to truth.
-        </p>
-<!-- CTAs -->
-<div class="flex flex-wrap items-center gap-4 pt-2">
-<a class="px-6 py-3.5 bg-primary-container text-on-primary font-label-md text-label-md rounded shadow-[4px_4px_0px_#1b1b1f] hover:bg-primary transition-all active:translate-x-1 active:translate-y-1 active:shadow-[1px_1px_0px_#1b1b1f] flex items-center gap-2" href="#flagship">
-<span>[ READ THE CASE STUDIES ↘ ]</span>
-</a>
-<a class="px-4 py-3.5 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded shadow-[2px_2px_0px_#1b1b1f] hover:bg-surface-container transition-all active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-1.5" href="https://drive.google.com/file/d/1Pt6b8JiQLP75TA7vhtu1APckRR7IaLZA/view?usp=sharing" rel="noreferrer" target="_blank">
-<span>RESUME (PDF) ↗</span>
-</a>
-<a class="px-4 py-3.5 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded shadow-[2px_2px_0px_#1b1b1f] hover:bg-surface-container transition-all active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-1.5" href="https://www.linkedin.com/in/santhosh12/" rel="noreferrer" target="_blank">
-<span>LINKEDIN ↗</span>
-</a>
-<a class="px-4 py-3.5 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded shadow-[2px_2px_0px_#1b1b1f] hover:bg-surface-container transition-all active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-1.5" href="https://github.com/Santhosh1108" rel="noreferrer" target="_blank">
-<span>GITHUB ↗</span>
-</a>
-</div>
-</div>
-<!-- Right Visual Widget: Graphic Blueprint Card -->
-<div class="lg:col-span-4 flex flex-col gap-4">
-<div class="p-6 bg-surface-container-lowest rounded shadow-[4px_4px_0px_#1b1b1f] relative overflow-hidden flex flex-col gap-4">
-<div class="absolute top-0 right-0 bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1 rounded-bl shadow-[1px_1px_0px_#1b1b1f]">
-            SPEC_SYS v2.6
-          </div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[22px]">psychology</span>
-<span class="font-headline-sm text-headline-sm uppercase tracking-tight">The Builder Equation</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant">
-            "A generic PRD is a liability. A prototype is a contract between user intent and engineering reality."
-          </p>
-<!-- Telemetry mini snippet -->
-<div class="p-3 bg-surface-container rounded font-label-sm text-label-sm flex flex-col gap-1.5 shadow-inner">
-<div class="flex justify-between text-on-surface-variant">
-<span>ACTIVE_CYCLE</span>
-<span class="text-primary font-bold">DISCOVERY → SPEC → BUILD</span>
-</div>
-<div class="flex justify-between text-on-surface-variant">
-<span>UNITS_SHIPPED</span>
-<span class="text-on-surface font-bold">4 APPS • 2 PROD CLIENTS</span>
-</div>
-<div class="flex justify-between text-on-surface-variant">
-<span>UNCERTAINTY_INDEX</span>
-<span class="text-secondary font-bold">-68% VIA RAPID LOOPS</span>
-</div>
-</div>
-<!-- Comic Speech Bubble Note -->
-<div class="p-3 bg-secondary-container text-on-secondary-container rounded shadow-[2px_2px_0px_#1b1b1f] relative">
-<div class="font-label-sm text-label-sm font-bold flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[16px]">priority_high</span>
-<span>TACTICAL RULE:</span>
-</div>
-<p class="font-body-sm text-body-sm mt-1">If the team is arguing for &gt;45 minutes, stop the meeting and write a 10-line prototype test.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Comic Ticker: 4 Protagonist Signals -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
-<div class="p-4 bg-surface-container-lowest rounded shadow-[2px_2px_0px_#1b1b1f] hover:-translate-y-1 transition-transform flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container text-primary font-bold rounded">SIGNAL 01</span>
-<span class="material-symbols-outlined text-primary text-[20px]">search_insights</span>
-</div>
-<div class="font-headline-sm text-headline-sm uppercase text-on-surface">Problem Snooping</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Zero guesswork. Interrogate the bleeding friction before touching solutions or roadmap slots.</p>
-</div>
-<div class="p-4 bg-surface-container-lowest rounded shadow-[2px_2px_0px_#1b1b1f] hover:-translate-y-1 transition-transform flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container text-secondary font-bold rounded">SIGNAL 02</span>
-<span class="material-symbols-outlined text-secondary text-[20px]">bolt</span>
-</div>
-<div class="font-headline-sm text-headline-sm uppercase text-on-surface">Radical Prototyping</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">A 48-hour working demo beats 40 pages of Jira speculation and speculative slack debates.</p>
-</div>
-<div class="p-4 bg-surface-container-lowest rounded shadow-[2px_2px_0px_#1b1b1f] hover:-translate-y-1 transition-transform flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container text-tertiary-container text-on-tertiary font-bold rounded">SIGNAL 03</span>
-<span class="material-symbols-outlined text-tertiary text-[20px]">tune</span>
-</div>
-<div class="font-headline-sm text-headline-sm uppercase text-on-surface">Hard Trade-Offs</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Deliberately killing 9 shiny side-distractions so 1 core loop actually solves the user issue.</p>
-</div>
-<div class="p-4 bg-surface-container-lowest rounded shadow-[2px_2px_0px_#1b1b1f] hover:-translate-y-1 transition-transform flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container text-on-surface-variant font-bold rounded">SIGNAL 04</span>
-<span class="material-symbols-outlined text-on-surface text-[20px]">code</span>
-</div>
-<div class="font-headline-sm text-headline-sm uppercase text-on-surface">Code Fluency</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Python, Next.js, FastAPI &amp; RAG. Technology is never a mysterious black box; I talk engineer natively.</p>
-</div>
-</div>
-</section>
-<!-- SECTION 01: EVIDENCE ARCHIVE // DON'T TAKE MY WORD FOR IT -->
-<section class="w-full py-16 bg-surface-container-low shadow-[0_2px_0px_#1b1b1f,0_-2px_0px_#1b1b1f]" id="flagship">
-<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter flex flex-col gap-10">
-<!-- Section Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b-2 border-on-surface">
-<div>
-<div class="flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase font-bold">
-<span>[ SECTION 01 // EVIDENCE ARCHIVE ]</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface mt-1">
-            Don't take my word for it. <span class="bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded shadow-[2px_2px_0px_#1b1b1f]">Look at what I built.</span>
-</h2>
-</div>
-<p class="font-label-md text-label-md text-on-surface-variant max-w-md">
-          Each project is a deliberate wager against ambiguity. No vanity wireframes. Real pipelines, tangible code, real metrics.
-        </p>
-</div>
-<!-- FLAGSHIP PROJECT: SPECLENS -->
-<div class="p-6 lg:p-8 bg-surface-container-lowest rounded shadow-[4px_4px_0px_#1b1b1f] flex flex-col lg:flex-row gap-8 items-stretch relative overflow-hidden">
-<div class="absolute -top-3 -right-3 rotate-3 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-4 py-1.5 rounded shadow-[2px_2px_0px_#1b1b1f] uppercase font-bold">
-          ★ FLAGSHIP MVP • LIVE • MEASURED
-        </div>
-<!-- Flagship Left: The Narrative & System Details -->
-<div class="lg:w-7/12 flex flex-col gap-6">
-<div class="flex flex-col gap-2">
-<span class="font-label-sm text-label-sm text-primary font-bold tracking-wider">PROJECT 01 • AI PRODUCT DISCOVERY ENGINE</span>
-<h3 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">SpecLens</h3>
-<p class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">
-              An AI-assisted product discovery tool that guides rough, unformed intuitions into stress-tested specs, critique loops, PRD documentation, and code-ready prototypes.
-            </p>
-</div>
-<!-- The Product Wager Box -->
-<div class="p-4 bg-primary-fixed/30 rounded border-l-4 border-primary shadow-sm flex flex-col gap-1">
-<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">THE PRODUCT WAGER // HYPOTHESIS:</span>
-<p class="font-body-md text-body-md text-on-surface">
-              The real bottleneck isn't formatting a PRD—it's asking the unasked questions early enough. When discovery is treated as a step-by-step diagnostic probe instead of a terrifying blank document, ideation velocity spikes 3x.
-            </p>
-</div>
-<!-- Concrete Architectural Decisions -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="p-3 bg-surface-container rounded flex flex-col gap-1">
-<span class="font-label-sm text-label-sm text-on-surface font-bold">01 / GUIDED INQUIRY CORE</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Replaced the blank canvas with single-prompt diagnostic drills so creators don't freeze.</p>
-</div>
-<div class="p-3 bg-surface-container rounded flex flex-col gap-1">
-<span class="font-label-sm text-label-sm text-on-surface font-bold">02 / UNIFIED STATE SCHEMA</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Pydantic schemas binding user personas, acceptance criteria, and edge cases into single context payload.</p>
-</div>
-<div class="p-3 bg-surface-container rounded flex flex-col gap-1">
-<span class="font-label-sm text-label-sm text-on-surface font-bold">03 / CONTINUOUS CRITIQUE</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Automated adversarial red-teaming flagging feasibility gaps before engineers see the Jira ticket.</p>
-</div>
-<div class="p-3 bg-surface-container rounded flex flex-col gap-1">
-<span class="font-label-sm text-label-sm text-on-surface font-bold">04 / TELEMETRY WITH POSTHOG</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Monitored funnel drop-offs at step 2 (edge cases) to rebalance prompt verbosity.</p>
-</div>
-</div>
-<!-- Stack Badges -->
-<div class="flex flex-wrap items-center gap-2 pt-2">
-<span class="px-2.5 py-1 bg-surface-container-high rounded font-label-sm text-label-sm shadow-[1px_1px_0px_#1b1b1f]">Next.js</span>
-<span class="px-2.5 py-1 bg-surface-container-high rounded font-label-sm text-label-sm shadow-[1px_1px_0px_#1b1b1f]">FastAPI</span>
-<span class="px-2.5 py-1 bg-surface-container-high rounded font-label-sm text-label-sm shadow-[1px_1px_0px_#1b1b1f]">Groq Engine</span>
-<span class="px-2.5 py-1 bg-surface-container-high rounded font-label-sm text-label-sm shadow-[1px_1px_0px_#1b1b1f]">PostHog</span>
-<span class="px-2.5 py-1 bg-surface-container-high rounded font-label-sm text-label-sm shadow-[1px_1px_0px_#1b1b1f]">Pydantic</span>
-</div>
-<!-- CTAs -->
-<div class="flex flex-wrap items-center gap-3 pt-2">
-<a class="px-5 py-2.5 bg-primary text-on-primary font-label-sm text-label-sm rounded shadow-[3px_3px_0px_#1b1b1f] hover:bg-primary-container transition-all active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-1.5" href="https://speclens-one.vercel.app/" rel="noreferrer" target="_blank">
-<span>LAUNCH SPECLENS ↗</span>
-</a>
-<a class="px-4 py-2.5 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm rounded shadow-[2px_2px_0px_#1b1b1f] hover:bg-surface-container transition-all flex items-center gap-1.5" href="https://drive.google.com/file/d/1-tIJ4chCtNxJ23byg10WU7JDd2jOONla/view?usp=sharing" rel="noreferrer" target="_blank">
-<span>CASE STUDY BREAKDOWN ↗</span>
-</a>
-<a class="px-4 py-2.5 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm rounded shadow-[2px_2px_0px_#1b1b1f] hover:bg-surface-container transition-all flex items-center gap-1.5" href="https://github.com/Santhosh1108/speclens" rel="noreferrer" target="_blank">
-<span>VIEW SOURCE ↗</span>
-</a>
-</div>
-</div>
-<!-- Flagship Right: Real Metric Telemetry & Graphic Visual -->
-<div class="lg:w-5/12 flex flex-col justify-between gap-6 bg-surface-container p-6 rounded shadow-[2px_2px_0px_#1b1b1f]">
-<div class="flex flex-col gap-4">
-<div class="flex items-center justify-between border-b border-outline-variant pb-2">
-<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant">REAL TELEMETRY RECORD</span>
-<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-bold">
-<span class="w-2 h-2 rounded-full bg-secondary-container"></span> POSTHOG HOOKS
-              </span>
-</div>
-<!-- 3 Stat Blocks -->
-<div class="grid grid-cols-3 gap-3">
-<div class="p-3 bg-surface-container-lowest rounded shadow-[2px_2px_0px_#1b1b1f] text-center flex flex-col">
-<span class="font-display-hero text-[36px] leading-[40px] text-primary font-bold">30</span>
-<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Ideas Explored</span>
-</div>
-<div class="p-3 bg-surface-container-lowest rounded shadow-[2px_2px_0px_#1b1b1f] text-center flex flex-col">
-<span class="font-display-hero text-[36px] leading-[40px] text-secondary font-bold">10</span>
-<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Discovery Done</span>
-</div>
-<div class="p-3 bg-surface-container-lowest rounded shadow-[2px_2px_0px_#1b1b1f] text-center flex flex-col">
-<span class="font-display-hero text-[36px] leading-[40px] text-on-surface font-bold">10</span>
-<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Full PRDs Gen</span>
-</div>
-</div>
-<!-- SVG Data Visual: Pipeline Funnel Flow -->
-<div class="p-4 bg-surface-container-lowest rounded shadow-[2px_2px_0px_#1b1b1f] flex flex-col gap-2">
-<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase">Pipeline State Flow</span>
-<svg class="w-full h-24 text-primary" fill="none" viewbox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
-<!-- Step 1 -->
-<rect fill="#E0E0FF" height="40" rx="2" stroke="#1B1B1F" stroke-width="1.5" width="60" x="5" y="20"></rect>
-<text fill="#0011CD" font-family="JetBrains Mono" font-size="9" font-weight="bold" text-anchor="middle" x="35" y="44">IDEA IN</text>
-<!-- Arrow 1 -->
-<path d="M70 40H88M88 40L83 35M88 40L83 45" stroke="#1B1B1F" stroke-width="1.5"></path>
-<!-- Step 2 -->
-<rect fill="#CAF300" height="50" rx="2" stroke="#1B1B1F" stroke-width="1.5" width="70" x="92" y="15"></rect>
-<text fill="#171E00" font-family="JetBrains Mono" font-size="9" font-weight="bold" text-anchor="middle" x="127" y="38">PROBING</text>
-<text fill="#171E00" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="127" y="52">5 Ques Drill</text>
-<!-- Arrow 2 -->
-<path d="M167 40H185M185 40L180 35M185 40L180 45" stroke="#1B1B1F" stroke-width="1.5"></path>
-<!-- Step 3 -->
-<rect fill="#FFFFFF" height="50" rx="2" stroke="#1B1B1F" stroke-width="1.5" width="65" x="189" y="15"></rect>
-<text fill="#1B1B1F" font-family="JetBrains Mono" font-size="9" font-weight="bold" text-anchor="middle" x="221" y="38">STATE</text>
-<text fill="#444557" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="221" y="52">JSON Schema</text>
-<!-- Arrow 3 -->
-<path d="M258 40H272M272 40L267 35M272 40L267 45" stroke="#1B1B1F" stroke-width="1.5"></path>
-<!-- Step 4 -->
-<rect fill="#0011CD" height="40" rx="2" stroke="#1B1B1F" stroke-width="1.5" width="40" x="275" y="20"></rect>
-<text fill="#FFFFFF" font-family="JetBrains Mono" font-size="8" font-weight="bold" text-anchor="middle" x="295" y="44">MVP</text>
-</svg>
-<div class="flex justify-between font-label-sm text-[10px] text-on-surface-variant">
-<span>RAW INTENT</span>
-<span>ZERO DRIFT TRANSITION</span>
-<span>CODE ARTIFACT</span>
-</div>
-</div>
-</div>
-<div class="p-3 bg-secondary-fixed/50 rounded flex items-center gap-2 text-on-secondary-fixed font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[18px]">verified</span>
-<span>Outcome: Decreased zero-to-PRD draft latency from 4.5 days to ~40 minutes.</span>
-</div>
-</div>
-</div>
-<!-- TRIO OF COMPLEMENTARY PRODUCTS -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-<!-- PROJECT 02: LINKEDIN CONVERSATION TAGGER -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col justify-between gap-4">
-<div class="flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container text-primary font-bold rounded">PROJECT 02</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">WORKFLOW OPS</span>
-</div>
-<h4 class="font-headline-md text-headline-md text-on-surface uppercase">LinkedIn Conversation Tagger</h4>
-<div class="p-3 bg-surface-container rounded font-label-sm text-label-sm border-l-2 border-primary">
-<span class="font-bold text-primary block mb-0.5">THE HYPOTHESIS:</span>
-              People don't need "inbox folders". They need quick conversational triage around deal stages &amp; follow-up deadlines without context switching.
-            </div>
-<ul class="font-body-md text-body-md text-on-surface-variant flex flex-col gap-2 list-disc list-inside">
-<li>Identified why LinkedIn messaging fails high-frequency recruiters and business developers.</li>
-<li>Engineered 1-click status classification (Lead, Follow-up, Pending, Warm Network).</li>
-<li>Built interactive user test prototype validating 82% preference over standard threads.</li>
-</ul>
-</div>
-<div class="flex flex-col gap-3 pt-3 border-t border-surface-container">
-<div class="flex flex-wrap gap-1.5">
-<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-sm text-[10px] rounded">PRD Spec</span>
-<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-sm text-[10px] rounded">Figma</span>
-<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-sm text-[10px] rounded">Triage UX</span>
-</div>
-<div class="flex items-center gap-2">
-<a class="flex-1 text-center py-2 bg-primary text-on-primary font-label-sm text-label-sm rounded shadow-[2px_2px_0px_#1b1b1f] hover:bg-primary-container transition-all" href="https://linked-chat-labeler.lovable.app/" rel="noreferrer" target="_blank">
-                PROTOTYPE ↗
-              </a>
-<a class="p-2 bg-surface-container text-on-surface rounded shadow-[1px_1px_0px_#1b1b1f] hover:bg-surface-container-high transition-all" href="https://drive.google.com/file/d/16fcjSYLEJ_-yPgx_OyVIYalIyDHTCe6_/view?usp=sharing" rel="noreferrer" target="_blank" title="View Case Study">
-<span class="material-symbols-outlined text-[18px]">description</span>
-</a>
-</div>
-</div>
-</div>
-<!-- PROJECT 03: FLOWBOARD -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col justify-between gap-4">
-<div class="flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container text-secondary font-bold rounded">PROJECT 03</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">VELOCITY TOOL</span>
-</div>
-<h4 class="font-headline-md text-headline-md text-on-surface uppercase">Flowboard PM</h4>
-<div class="p-3 bg-surface-container rounded font-label-sm text-label-sm border-l-2 border-secondary">
-<span class="font-bold text-secondary block mb-0.5">THE HYPOTHESIS:</span>
-              Project visibility is only useful if the tracking tool introduces less friction than the coordination chaos it is supposed to replace.
-            </div>
-<ul class="font-body-md text-body-md text-on-surface-variant flex flex-col gap-2 list-disc list-inside">
-<li>Designed snappy multi-project sprint dashboard with zero modal blocking.</li>
-<li>Built instant state rollback/undo for inadvertent column drag-and-drops.</li>
-<li>Wrote full technical spec for production transition: auth, websockets, and telemetry.</li>
-</ul>
-</div>
-<div class="flex flex-col gap-3 pt-3 border-t border-surface-container">
-<div class="flex flex-wrap gap-1.5">
-<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-sm text-[10px] rounded">Kanban</span>
-<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-sm text-[10px] rounded">JavaScript</span>
-<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-sm text-[10px] rounded">Product Logic</span>
-</div>
-<div class="flex items-center gap-2">
-<a class="flex-1 text-center py-2 bg-secondary text-on-secondary font-label-sm text-label-sm rounded shadow-[2px_2px_0px_#1b1b1f] hover:bg-secondary-container hover:text-on-secondary-container transition-all" href="https://project-management-tool-kappa-fawn.vercel.app/" rel="noreferrer" target="_blank">
-                LIVE TOOL ↗
-              </a>
-<a class="p-2 bg-surface-container text-on-surface rounded shadow-[1px_1px_0px_#1b1b1f] hover:bg-surface-container-high transition-all" href="https://github.com/Santhosh1108/Flow-Board_PM_Tool" rel="noreferrer" target="_blank" title="View Code Repository">
-<span class="material-symbols-outlined text-[18px]">code</span>
-</a>
-</div>
-</div>
-</div>
-<!-- PROJECT 04: INSIGHTPDF -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col justify-between gap-4">
-<div class="flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container text-tertiary-container text-on-tertiary font-bold rounded">PROJECT 04</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">RAG SYSTEMS</span>
-</div>
-<h4 class="font-headline-md text-headline-md text-on-surface uppercase">InsightPDF RAG</h4>
-<div class="p-3 bg-surface-container rounded font-label-sm text-label-sm border-l-2 border-tertiary">
-<span class="font-bold text-tertiary block mb-0.5">THE HYPOTHESIS:</span>
-              If an AI engine cannot cite the exact source paragraph, sentence, and page, it is a legal liability, not an enterprise feature.
-            </div>
-<ul class="font-body-md text-body-md text-on-surface-variant flex flex-col gap-2 list-disc list-inside">
-<li>Integrated Sentence Transformers &amp; FAISS semantic index for ultra-fast document search.</li>
-<li>Recursive text chunking preventing context bleed across section boundaries.</li>
-<li>Built citation highlights directly into user view to turn hallucinations into zero-risk outputs.</li>
-</ul>
-</div>
-<div class="flex flex-col gap-3 pt-3 border-t border-surface-container">
-<div class="flex flex-wrap gap-1.5">
-<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-sm text-[10px] rounded">Python</span>
-<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-sm text-[10px] rounded">FAISS</span>
-<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-sm text-[10px] rounded">Grounding</span>
-</div>
-<div class="flex items-center gap-2">
-<a class="flex-1 text-center py-2 bg-on-surface text-surface font-label-sm text-label-sm rounded shadow-[2px_2px_0px_#1b1b1f] hover:bg-surface-dim hover:text-on-surface transition-all" href="https://github.com/Santhosh1108/InsightPDF" rel="noreferrer" target="_blank">
-                VIEW ENGINE ↗
-              </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 02: THE OPERATIONAL COMPASS // HOW I THINK -->
-<section class="w-full py-16 px-gutter-mobile lg:px-gutter max-w-7xl mx-auto flex flex-col gap-10">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b-2 border-on-surface">
-<div>
-<div class="flex items-center gap-2 font-label-sm text-label-sm text-secondary uppercase font-bold">
-<span>[ SECTION 02 // OPERATIONAL COMPASS ]</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface mt-1">
-          The PM job is <span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded shadow-[2px_2px_0px_#1b1b1f]">systematically reducing uncertainty</span>.
-        </h2>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
-        Good product management isn't ritualistic ceremonies. It is creating high context, making intentional sacrifices, and letting feedback drive the steering wheel.
+<section class="relative w-full pt-12 pb-24 md:pb-36 flex flex-col items-center justify-center text-center px-margin lg:px-margin-desktop overflow-hidden">
+<div class="max-w-[1100px] mx-auto flex flex-col items-center relative z-10">
+<!-- Status Badge Pill -->
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-[#121212] border border-[#242424] hover:border-primary/50 transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.08)] mb-8">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-mono-sm text-label-mono-sm tracking-wider uppercase text-on-surface">Available for product roles</span>
+<span class="text-[#737373] text-[10px]">•</span>
+<span class="font-label-mono-sm text-label-mono-sm text-[#737373]">2026 / FULL-TIME</span>
+</div>
+<!-- H1 Display Title -->
+<h1 class="font-headline-lg text-[46px] sm:text-[64px] md:text-[84px] lg:text-[96px] leading-[0.92] tracking-[-0.04em] font-extrabold text-[#f5f5f5] max-w-5xl">
+        Product builder turning <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f0dbff] to-primary">messy problems</span> into products.
+      </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-[#737373] max-w-xl mx-auto mt-6 text-base sm:text-lg leading-relaxed font-light">
+        I’m a Computer Science graduate and product builder focused on product discovery, user experience, rapid prototyping, and AI-powered products. I like getting close to the problem, building quickly, and using evidence to decide what ships.
       </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center justify-center gap-space-md mt-10">
+<a class="inline-flex items-center gap-2 bg-[#a855f7] hover:bg-[#8b25f0] text-[#0a0a0a] font-label-ui px-8 py-3.5 rounded-lg transition-all duration-300 shadow-[0_0_30px_rgba(168,85,247,0.35)] hover:shadow-[0_0_40px_rgba(168,85,247,0.55)] hover:-translate-y-0.5" href="#work">
+<span class="font-semibold tracking-tight">Explore Work</span>
+<span class="font-label-mono text-sm leading-none">↓</span>
+</a>
+<a class="inline-flex items-center gap-2 bg-[#121212] hover:bg-[#1a1a1a] text-[#f5f5f5] hover:text-primary border border-[#242424] hover:border-primary/50 font-label-ui px-7 py-3.5 rounded-lg transition-all duration-300" href="#about">
+<span>Read Bio &amp; Stack</span>
+<span class="font-label-mono text-sm text-[#737373]">→</span>
+</a>
 </div>
-<!-- 4-Step Comic Sequence Strip -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Panel 01 -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col justify-between gap-6 relative">
-<div class="flex items-center justify-between">
-<span class="font-display-hero text-[32px] text-primary font-bold leading-none">01</span>
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-primary-fixed text-on-primary-fixed font-bold rounded">CONTEXT</span>
+<!-- 3D Object Showcase Hero Image -->
+<div class="relative w-full max-w-[540px] mt-12 sm:mt-16 flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full scale-90 pointer-events-none"></div>
+<img class="relative z-10 w-full h-auto max-h-[460px] object-contain animate-[float_6s_ease-in-out_infinite] drop-shadow-[0_0_60px_rgba(168,85,247,0.38)]" data-alt="An intricate 3D chrome metallic torus knot floating on pure obsidian black background, vivid ambient purple edge specular reflections, hyper-detailed futuristic fluid sculpture with ultra-soft atmospheric purple luminescence"/>
 </div>
-<div class="flex flex-col gap-2">
-<h3 class="font-headline-md text-headline-md uppercase text-on-surface">Understand Before Prescribing</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-            Who is actually bleeding? What are they clumsily doing right now to patch it? Why solve it today vs next quarter? No wireframes exist until friction is proven.
-          </p>
+<!-- Tech Logos Row -->
+<div class="w-full mt-16 pt-8 border-t border-[#242424]/60 flex flex-col items-center">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-[#737373] mb-6">PRODUCT + BUILD STACK</span>
+<div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-50 hover:opacity-90 transition-opacity duration-300 text-xs tracking-wider uppercase font-label-mono">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary/80"></span>
+<span>FIGMA</span>
 </div>
-<div class="p-2.5 bg-surface-container rounded font-label-sm text-[11px] text-on-surface-variant">
-          • Rule: If the user interview lacks emotion, you haven't found the problem yet.
-        </div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary/80"></span>
+<span>NOTION</span>
 </div>
-<!-- Panel 02 -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col justify-between gap-6 relative">
-<div class="flex items-center justify-between">
-<span class="font-display-hero text-[32px] text-secondary font-bold leading-none">02</span>
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-bold rounded">DECISION</span>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary/80"></span>
+<span>JAVASCRIPT</span>
 </div>
-<div class="flex flex-col gap-2">
-<h3 class="font-headline-md text-headline-md uppercase text-on-surface">Make Trade-offs Visible</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-            A roadmap is merely a published record of things you deliberately chose to kill. Document the anti-scope explicitly so engineering and sales don't assume it's hiding in sprint 3.
-          </p>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary/80"></span>
+<span>POSTHOG</span>
 </div>
-<div class="p-2.5 bg-surface-container rounded font-label-sm text-[11px] text-on-surface-variant">
-          • Rule: Define what evidence would cause you to reverse this bet.
-        </div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary/80"></span>
+<span>PYTHON / AI</span>
 </div>
-<!-- Panel 03 -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col justify-between gap-6 relative">
-<div class="flex items-center justify-between">
-<span class="font-display-hero text-[32px] text-tertiary font-bold leading-none">03</span>
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-bold rounded">BUILD</span>
 </div>
-<div class="flex flex-col gap-2">
-<h3 class="font-headline-md text-headline-md uppercase text-on-surface">Get Tactile in Hands Fast</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-            Slide decks produce polite nods. Working software with mock data produces immediate visceral honesty. When users stumble over a button, all philosophical debate ends.
-          </p>
-</div>
-<div class="p-2.5 bg-surface-container rounded font-label-sm text-[11px] text-on-surface-variant">
-          • Rule: The fastest prototype that tests the hypothesis always wins.
-        </div>
-</div>
-<!-- Panel 04 -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col justify-between gap-6 relative">
-<div class="flex items-center justify-between">
-<span class="font-display-hero text-[32px] text-on-surface font-bold leading-none">04</span>
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container-highest text-on-surface font-bold rounded">FEEDBACK</span>
-</div>
-<div class="flex flex-col gap-2">
-<h3 class="font-headline-md text-headline-md uppercase text-on-surface">Let Evidence Call Shots</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-            Gut feel is an acceptable spark for a hypothesis, but a terrible reason to stay on a dying path. If telemetry shows zero repeat usage, have the guts to kill the feature.
-          </p>
-</div>
-<div class="p-2.5 bg-surface-container rounded font-label-sm text-[11px] text-on-surface-variant">
-          • Rule: Ship, instrument event hooks, read PostHog, pivot or double-down.
-        </div>
 </div>
 </div>
 </section>
-<!-- SECTION 03: FIELD NOTES & WAR STORIES (EXPERIENCE & LEADERSHIP) -->
-<section class="w-full py-16 bg-surface-container-low shadow-[0_2px_0px_#1b1b1f,0_-2px_0px_#1b1b1f]">
-<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter flex flex-col gap-10">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b-2 border-on-surface">
+<!-- SELECTED WORK -->
+<section class="w-full py-space-3xl px-margin lg:px-margin-desktop border-t border-[#242424]/40 relative" id="work">
+<div class="max-w-[1320px] mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
 <div>
-<div class="flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase font-bold">
-<span>[ SECTION 03 // FIELD NOTES ]</span>
+<div class="flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-widest mb-3">
+<span>// 01</span>
+<span>PORTFOLIO SHOWCASE</span>
 </div>
-<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface mt-1">
-            Startup experience taught me to <span class="bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded shadow-[2px_2px_0px_#1b1b1f]">own the messy middle</span>.
+<h2 class="font-headline-lg text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.04em] text-[#f5f5f5]">
+            Selected work.
           </h2>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
-          Titles don't solve ambiguous bottlenecks. Communicating clearly, aligning disparate people, and executing cross-functionally does.
+<p class="font-body-md text-[#737373] max-w-md">
+          Selected product work spanning AI tools, workflow automation, product discovery, and technical prototypes.
         </p>
 </div>
-<!-- Two-Column Asymmetric Layout -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-<!-- Left: Founder's Office Deep Dive -->
-<div class="lg:col-span-7 p-6 lg:p-8 bg-surface-container-lowest rounded shadow-[4px_4px_0px_#1b1b1f] flex flex-col gap-6">
-<div class="flex flex-wrap items-center justify-between gap-2 border-b border-outline-variant pb-3">
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 bg-primary rounded-sm shadow-[1px_1px_0px_#1b1b1f]"></span>
-<span class="font-headline-sm text-headline-sm uppercase text-on-surface">Founder's Office @ Skiaverse Pvt. Ltd.</span>
+<!-- 2-Column Asymmetric Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Project 1 (Col-span 12 Full-Width Hero Feature) -->
+<article class="group md:col-span-12 rounded-2xl bg-[#121212] border border-[#242424] hover:border-[#a855f7]/60 p-6 sm:p-10 transition-all duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.14)] relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Info Panel -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-[#1a1a1a] border border-primary/30 text-primary font-label-mono-sm text-[11px] tracking-wider uppercase">FEATURED CASE STUDY</span>
+<span class="font-label-mono-sm text-[#737373]">2024</span>
 </div>
-<span class="font-label-sm text-label-sm px-2.5 py-1 bg-surface-container text-on-surface-variant rounded">RECENT • 0-TO-1</span>
+<h3 class="font-headline-md text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#f5f5f5] group-hover:text-primary transition-colors">
+                  SpecLens — AI Product Discovery Engine
+                </h3>
+<p class="font-body-md text-[#737373] leading-relaxed">
+                  An AI-assisted product discovery tool that turns rough ideas into guided discovery, critique loops, PRDs, and code-ready prototypes.
+                </p>
 </div>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-            Worked directly in the pocket of the founding team across rapid product definition, pitch-deck value proposition engineering, Figma prototyping, and operational execution.
-          </p>
-<div class="flex flex-col gap-3">
-<div class="p-3 bg-surface-container rounded flex gap-3 items-start">
-<span class="font-label-sm text-label-sm font-bold text-primary px-1.5 py-0.5 bg-primary-fixed rounded">01</span>
+<!-- Metrics Block -->
+<div class="grid grid-cols-2 gap-4 py-4 border-y border-[#242424]/60">
 <div>
-<span class="font-label-sm text-label-sm text-on-surface font-bold">Figma Prototyping &amp; Interface Testing:</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Designed multi-screen walkthroughs for partner demos, cutting alignment churn before engineering estimation sprints.</p>
+<div class="font-headline-md text-3xl font-bold text-white tracking-tight">30</div>
+<div class="font-label-mono-sm text-[#737373] uppercase mt-1">Ideas Explored</div>
 </div>
-</div>
-<div class="p-3 bg-surface-container rounded flex gap-3 items-start">
-<span class="font-label-sm text-label-sm font-bold text-primary px-1.5 py-0.5 bg-primary-fixed rounded">02</span>
 <div>
-<span class="font-label-sm text-label-sm text-on-surface font-bold">Narrative &amp; Pitch Architecture:</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Distilled complex platform mechanisms into crisp value props for investors and early event partners.</p>
+<div class="font-headline-md text-3xl font-bold text-primary tracking-tight">10</div>
+<div class="font-label-mono-sm text-[#737373] uppercase mt-1">Discovery Done</div>
 </div>
 </div>
-<div class="p-3 bg-surface-container rounded flex gap-3 items-start">
-<span class="font-label-sm text-label-sm font-bold text-primary px-1.5 py-0.5 bg-primary-fixed rounded">03</span>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-[#1a1a1a] text-[#737373] font-label-mono-sm text-[11px]">AI Product</span>
+<span class="px-2.5 py-1 rounded bg-[#1a1a1a] text-[#737373] font-label-mono-sm text-[11px]">Product Discovery</span>
+<span class="px-2.5 py-1 rounded bg-[#1a1a1a] text-[#737373] font-label-mono-sm text-[11px]">Live MVP</span>
+<span class="px-2.5 py-1 rounded bg-[#1a1a1a] text-[#737373] font-label-mono-sm text-[11px]">RAG / AI</span>
+</div>
 <div>
-<span class="font-label-sm text-label-sm text-on-surface font-bold">Gaming Event Operations:</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Coordinated real-time logistics and participant onboarding loops under high-pressure live deadlines.</p>
-</div>
-</div>
-</div>
-<div class="p-4 bg-secondary-container/40 rounded flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-secondary-container font-bold uppercase">KEY TAKEAWAY:</span>
-<span class="font-body-sm text-body-sm text-on-surface text-right">"Speed is good; clarity of intent is faster."</span>
-</div>
-</div>
-<!-- Right: Leadership & Community Stewardship -->
-<div class="lg:col-span-5 flex flex-col gap-6">
-<!-- Role 1: Media Council -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container font-bold text-on-surface rounded">2023 — 2026</span>
-<span class="font-label-sm text-label-sm text-primary uppercase font-bold">CAMPUS LEADERSHIP</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Media Council • IIIT Ranchi</h3>
-<span class="font-label-md text-label-md text-on-surface-variant font-medium">PR Team → Joint Secretary → Secretary</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-              Managed institute-wide broadcast strategy, coordinated editorial coverage, and orchestrated communications campaigns that scaled audience engagement across student and alumni cohorts.
-            </p>
-<div class="font-label-sm text-[11px] text-on-surface-variant pt-2 border-t border-surface-container">
-              • Owned team alignment, narrative polish, and production calendars across 30+ contributors.
-            </div>
-</div>
-<!-- Role 2: Piccell Creative Community -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container font-bold text-on-surface rounded">2024 — 2026</span>
-<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">COMMUNITY OPS</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Piccell Creative Community</h3>
-<span class="font-label-md text-label-md text-on-surface-variant font-medium">Vice Head → Head</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-              Redesigned club event formats from scratch using anonymous post-mortem survey data, eliminating stale workshop fatigue and restoring active event turnout.
-            </p>
-<div class="font-label-sm text-[11px] text-on-surface-variant pt-2 border-t border-surface-container">
-              • Treated community participation as a retention funnel; iterated based on member feedback.
-            </div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 04: THE ARSENAL // CODE & PRODUCT CRAFT -->
-<section class="w-full py-16 px-gutter-mobile lg:px-gutter max-w-7xl mx-auto flex flex-col gap-10">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b-2 border-on-surface">
-<div>
-<div class="flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase font-bold">
-<span>[ SECTION 04 // THE ARSENAL ]</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface mt-1">
-          Technical fluency with a <span class="bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded shadow-[2px_2px_0px_#1b1b1f]">product-first bias</span>.
-        </h2>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
-        The stack matters because it lets me investigate bugs at runtime, prototype in hours, and write tickets that engineers respect.
-      </p>
-</div>
-<!-- Taxonomy Bento Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Box 1: Product Strategy -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col gap-4">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[24px]">assignment</span>
-<span class="font-headline-sm text-headline-sm uppercase text-on-surface">01 / Product Craft</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-          Structuring ambiguity into testable specs, roadmaps, and verifiable outcomes.
-        </p>
-<div class="flex flex-wrap gap-2 pt-2 border-t border-surface-container">
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">Product Discovery</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">User Story Mapping</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">PRD Authoring</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">RICE / MoSCoW</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">Go-To-Market (GTM)</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">Experimentation</span>
-</div>
-</div>
-<!-- Box 2: Engineering & AI Stack -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col gap-4">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[24px]">terminal</span>
-<span class="font-headline-sm text-headline-sm uppercase text-on-surface">02 / Tech &amp; AI</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-          Native language tools to prototype, query databases, and build AI workflows.
-        </p>
-<div class="flex flex-wrap gap-2 pt-2 border-t border-surface-container">
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">Python</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">SQL Querying</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">FastAPI</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">Next.js</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">RAG &amp; FAISS</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">Groq &amp; Ollama</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">REST APIs</span>
-</div>
-</div>
-<!-- Box 3: Product Ops & Tools -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col gap-4">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary text-[24px]">construction</span>
-<span class="font-headline-sm text-headline-sm uppercase text-on-surface">03 / Tooling &amp; Ops</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-          Tactile instruments to measure usage, align teams, and automate workflows.
-        </p>
-<div class="flex flex-wrap gap-2 pt-2 border-t border-surface-container">
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">PostHog</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">Figma</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">Jira Software</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">Notion Workspaces</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">GitHub</span>
-<span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-label-sm">n8n Automations</span>
-</div>
-</div>
-<!-- Box 4: Education & Certifications -->
-<div class="p-6 bg-surface-container-lowest rounded shadow-[3px_3px_0px_#1b1b1f] flex flex-col gap-4">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-on-surface text-[24px]">school</span>
-<span class="font-headline-sm text-headline-sm uppercase text-on-surface">04 / Credentials</span>
-</div>
-<div class="flex flex-col gap-2">
-<span class="font-label-sm text-label-sm font-bold text-primary uppercase">IIIT RANCHI (2022-2026)</span>
-<span class="font-body-sm text-body-sm text-on-surface font-semibold">B.Tech in Computer Science and Engineering</span>
-</div>
-<div class="flex flex-col gap-2 pt-2 border-t border-surface-container">
-<div class="flex items-center justify-between text-xs">
-<span class="font-label-sm text-label-sm text-on-surface">Pendo PM Basics</span>
-<a class="text-primary font-bold hover:underline" href="https://www.credly.com/badges/13c14de6-4ebb-4c76-8521-527670a6b97e/public_url" rel="noreferrer" target="_blank">VERIFY ↗</a>
-</div>
-<div class="flex items-center justify-between text-xs">
-<span class="font-label-sm text-label-sm text-on-surface">Technical PM (Udemy)</span>
-<a class="text-primary font-bold hover:underline" href="https://www.udemy.com/certificate/UC-caf67e58-318b-4b74-893b-240a029e090f/" rel="noreferrer" target="_blank">VERIFY ↗</a>
-</div>
-<div class="flex items-center justify-between text-xs">
-<span class="font-label-sm text-label-sm text-on-surface">Strategic Mgmt &amp; Sales</span>
-<a class="text-primary font-bold hover:underline" href="https://www.udemy.com/certificate/UC-9488c980-2bac-451c-8465-4542a5f7cc13/" rel="noreferrer" target="_blank">VERIFY ↗</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 05: TRANSMISSION // CONTACT & CALLOUT -->
-<section class="w-full py-16 lg:py-24 bg-surface-container-high shadow-[0_-2px_0px_#1b1b1f]">
-<div class="max-w-5xl mx-auto px-gutter-mobile lg:px-gutter flex flex-col items-center text-center gap-8">
-<!-- Speech Badge -->
-<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded shadow-[2px_2px_0px_#1b1b1f] rotate-1 font-label-sm text-label-sm font-bold uppercase">
-<span>[ TRANSMISSION OPEN // 2026 INTAKE ]</span>
-</div>
-<!-- Headline -->
-<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface max-w-2xl">
-        Looking for someone who can <span class="bg-primary-container text-on-primary px-2 py-0.5 rounded shadow-[3px_3px_0px_#1b1b1f] inline-block -rotate-1">find the problem</span> and move?
-      </h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-        I'm interviewing for APM &amp; Product Management roles where I can collaborate directly with users, designers, and engineers to turn messy ambiguities into shipped reality.
-      </p>
-<!-- Tactical Direct Email Button with hard click -->
-<div class="flex flex-col items-center gap-3 w-full max-w-md">
-<a class="w-full py-4 px-6 bg-primary text-on-primary font-label-md text-label-md rounded shadow-[4px_4px_0px_#1b1b1f] hover:bg-primary-container transition-all active:translate-x-1 active:translate-y-1 active:shadow-[1px_1px_0px_#1b1b1f] flex items-center justify-center gap-2" href="mailto:work.santhosh18@gmail.com">
-<span class="material-symbols-outlined text-[20px]">mail</span>
-<span>work.santhosh18@gmail.com ↗</span>
+<a class="inline-flex items-center gap-2 text-primary font-label-ui text-sm hover:underline group-hover:translate-x-1 transition-transform" href="#hire-me">
+<span>View SpecLens Case Study</span>
+<span class="font-label-mono">→</span>
 </a>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Response SLA: &lt; 24 Hours • Direct to Santhosh</span>
 </div>
-<!-- Links Cluster -->
-<div class="flex flex-wrap justify-center items-center gap-3 pt-4">
-<a class="px-4 py-2 bg-surface-container-lowest text-on-surface rounded shadow-[2px_2px_0px_#1b1b1f] font-label-sm text-label-sm hover:bg-surface-container transition-all" href="https://linktr.ee/santhosh18" rel="noreferrer" target="_blank">
-          LINKTREE ↗
-        </a>
-<a class="px-4 py-2 bg-surface-container-lowest text-on-surface rounded shadow-[2px_2px_0px_#1b1b1f] font-label-sm text-label-sm hover:bg-surface-container transition-all" href="https://www.linkedin.com/in/santhosh12/" rel="noreferrer" target="_blank">
-          LINKEDIN ↗
-        </a>
-<a class="px-4 py-2 bg-surface-container-lowest text-on-surface rounded shadow-[2px_2px_0px_#1b1b1f] font-label-sm text-label-sm hover:bg-surface-container transition-all" href="https://github.com/Santhosh1108" rel="noreferrer" target="_blank">
-          GITHUB ↗
-        </a>
-<a class="px-4 py-2 bg-surface-container-lowest text-on-surface rounded shadow-[2px_2px_0px_#1b1b1f] font-label-sm text-label-sm hover:bg-surface-container transition-all" href="https://drive.google.com/file/d/1Pt6b8JiQLP75TA7vhtu1APckRR7IaLZA/view?usp=sharing" rel="noreferrer" target="_blank">
-          RESUME (PDF) ↗
-        </a>
+</div>
+<!-- Right Visual Preview Mockup -->
+<div class="lg:col-span-7 rounded-xl bg-[#1a1a1a] border border-[#242424] overflow-hidden relative p-4 sm:p-6 group-hover:border-primary/40 transition-colors">
+<div class="flex items-center justify-between mb-4 border-b border-[#242424] pb-3">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-[#353534]"></div>
+<div class="w-3 h-3 rounded-full bg-[#353534]"></div>
+<div class="w-3 h-3 rounded-full bg-[#353534]"></div>
+<span class="font-label-mono-sm text-[11px] text-[#737373] ml-2">speclens-delta.vercel.app</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary/10 border border-primary/20 text-primary font-label-mono-sm text-[10px]">
+<span>LIVE PRODUCT</span>
+</div>
+</div>
+<img class="w-full h-[320px] sm:h-[400px] object-cover rounded-lg group-hover:scale-[1.01] transition-transform duration-500" data-alt="AI product discovery interface with guided questions, PRD generation, critique flow, and product workflow screens"/>
+</div>
+</div>
+</article>
+<!-- Project 2 (Col-span 7) -->
+<article class="group md:col-span-7 rounded-2xl bg-[#121212] border border-[#242424] hover:border-[#a855f7]/60 p-6 sm:p-8 transition-all duration-500 hover:shadow-[0_0_35px_rgba(168,85,247,0.12)] flex flex-col justify-between">
+<div>
+<div class="rounded-xl bg-[#1a1a1a] border border-[#242424] overflow-hidden mb-6 relative">
+<img class="w-full h-64 sm:h-80 object-cover rounded-lg group-hover:scale-[1.02] transition-transform duration-500" data-alt="Futuristic high-frequency algorithmic financial crypto trading terminal UI on dark screen, real-time candlestick charts, purple and amber indicators, dense telemetry, clean tabular numbers"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono-sm text-primary uppercase">FINTECH · WEB APPLICATION</span>
+<span class="font-label-mono-sm text-[#737373]">2024</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold text-[#f5f5f5] group-hover:text-primary transition-colors">
+              LinkedIn Conversation Tagger
+            </h3>
+<p class="font-body-md text-[#737373] mt-3">
+              A product concept for turning LinkedIn conversations into actionable lead, follow-up, pending, and warm-network states without losing context.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-[#242424]/60 flex items-center justify-between">
+<span class="font-label-mono-sm text-xs text-[#737373]">&lt; 16ms Latency UX · 84K DAU</span>
+<span class="font-label-mono text-primary text-sm group-hover:translate-x-1 transition-transform">View Case Study →</span>
+</div>
+</article>
+<!-- Project 3 (Col-span 5) -->
+<article class="group md:col-span-5 rounded-2xl bg-[#121212] border border-[#242424] hover:border-[#a855f7]/60 p-6 sm:p-8 transition-all duration-500 hover:shadow-[0_0_35px_rgba(168,85,247,0.12)] flex flex-col justify-between">
+<div>
+<div class="rounded-xl bg-[#1a1a1a] border border-[#242424] overflow-hidden mb-6 relative">
+<img class="w-full h-64 sm:h-80 object-cover rounded-lg group-hover:scale-[1.02] transition-transform duration-500" data-alt="Comprehensive enterprise UI design system documentation showcase, component inventory cards, token chips, purple accessibility indicators, structured layout grid"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono-sm text-primary uppercase">PRODUCT SYSTEM · TOKENS</span>
+<span class="font-label-mono-sm text-[#737373]">2023</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold text-[#f5f5f5] group-hover:text-primary transition-colors">
+              Flowboard PM
+            </h3>
+<p class="font-body-md text-[#737373] mt-3">
+              A lightweight project-management tool focused on fast visibility, simple workflows, and reducing coordination friction across projects.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-[#242424]/60 flex items-center justify-between">
+<span class="font-label-mono-sm text-xs text-[#737373]">Product Logic · JavaScript · Live Tool</span>
+<span class="font-label-mono text-primary text-sm group-hover:translate-x-1 transition-transform">View Case Study →</span>
+</div>
+</article>
+<!-- Project 4 (Col-span 6) -->
+<article class="group md:col-span-6 rounded-2xl bg-[#121212] border border-[#242424] hover:border-[#a855f7]/60 p-6 sm:p-8 transition-all duration-500 hover:shadow-[0_0_35px_rgba(168,85,247,0.12)] flex flex-col justify-between">
+<div>
+<div class="rounded-xl bg-[#1a1a1a] border border-[#242424] overflow-hidden mb-6 relative">
+<img class="w-full h-64 sm:h-72 object-cover rounded-lg group-hover:scale-[1.02] transition-transform duration-500" data-alt="Creative 3D studio application interface with spatial canvas, glowing shader graphs, dark viewport with viewport lighting controls and timeline scrubbers"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono-sm text-primary uppercase">CREATIVE TOOL · DESKTOP</span>
+<span class="font-label-mono-sm text-[#737373]">2024</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold text-[#f5f5f5] group-hover:text-primary transition-colors">
+              InsightPDF RAG
+            </h3>
+<p class="font-body-md text-[#737373] mt-3">
+              A retrieval-augmented document Q&A project using semantic search, FAISS, SentenceTransformers, and grounded answers.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-[#242424]/60 flex items-center justify-between">
+<span class="font-label-mono-sm text-xs text-[#737373]">Python · FAISS · RAG</span>
+<span class="font-label-mono text-primary text-sm group-hover:translate-x-1 transition-transform">View Case Study →</span>
+</div>
+</article>
+<!-- Project 5 (Col-span 6) -->
+<article class="group md:col-span-6 rounded-2xl bg-[#121212] border border-[#242424] hover:border-[#a855f7]/60 p-6 sm:p-8 transition-all duration-500 hover:shadow-[0_0_35px_rgba(168,85,247,0.12)] flex flex-col justify-between">
+<div>
+<div class="rounded-xl bg-[#1a1a1a] border border-[#242424] overflow-hidden mb-6 relative">
+<img class="w-full h-64 sm:h-72 object-cover rounded-lg group-hover:scale-[1.02] transition-transform duration-500" data-alt="Minimal sleek mobile health companion app interface screens showing biometric longevity radar score, sleep telemetry curves, circadian rhythm dials on deep black OLED display"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono-sm text-primary uppercase">HEALTH TECH · MOBILE APP</span>
+<span class="font-label-mono-sm text-[#737373]">2023</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold text-[#f5f5f5] group-hover:text-primary transition-colors">
+              Sentiment Analysis AI
+            </h3>
+<p class="font-body-md text-[#737373] mt-3">
+              A deep-learning sentiment classification project comparing classical ML and transformer-based approaches for contextual sentiment handling.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-[#242424]/60 flex items-center justify-between">
+<span class="font-label-mono-sm text-xs text-[#737373]">BERT · RoBERTa · DistilBERT</span>
+<span class="font-label-mono text-primary text-sm group-hover:translate-x-1 transition-transform">View Case Study →</span>
+</div>
+</article>
 </div>
 </div>
 </section>
+<!-- ABOUT SECTION -->
+<section class="w-full py-space-3xl px-margin lg:px-margin-desktop border-t border-[#242424]/40 bg-[#0e0e0e] relative" id="about">
+<div class="max-w-[1320px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Narrative Column -->
+<div class="lg:col-span-7 space-y-8">
+<div>
+<div class="flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-widest mb-3">
+<span>// 02</span>
+<span>BIOGRAPHY &amp; CRAFT</span>
 </div>
+<h2 class="font-headline-lg text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.04em] text-[#f5f5f5]">
+              Building products by getting closer to the problem.
+            </h2>
+</div>
+<div class="space-y-5 font-body-md text-[#cfc2d6] text-base sm:text-lg leading-relaxed font-light">
+<p>
+              I’m a Computer Science graduate from IIIT Ranchi who moved toward product because I enjoy understanding why something should be built, not just how it should be built. My work sits between product thinking, user experience, experimentation, and technical execution.
+            </p>
+<p>
+              I work from the problem outward: understand the user friction, define the product hypothesis, prototype the experience, test it, and then build when code is the fastest way to learn. I’m comfortable moving between Figma, product docs, analytics, APIs, and working prototypes.
+            </p>
+<p>
+              My portfolio reflects that approach through products like SpecLens, workflow automation, product concepts, RAG systems, and hands-on work across startup environments.
+            </p>
+</div>
+<!-- Credential Chips -->
+<div class="flex flex-wrap gap-2.5 pt-2">
+<span class="px-3.5 py-1.5 rounded-full bg-[#121212] border border-[#242424] text-on-surface font-label-mono-sm text-xs">Product Management</span>
+<span class="px-3.5 py-1.5 rounded-full bg-[#121212] border border-[#242424] text-on-surface font-label-mono-sm text-xs">CS Graduate</span>
+<span class="px-3.5 py-1.5 rounded-full bg-[#121212] border border-[#242424] text-on-surface font-label-mono-sm text-xs">0→1 Projects</span>
+<span class="px-3.5 py-1.5 rounded-full bg-[#121212] border border-[#242424] text-on-surface font-label-mono-sm text-xs">Open to PM / APM</span>
+<span class="px-3.5 py-1.5 rounded-full bg-[#121212] border border-primary/40 text-primary font-label-mono-sm text-xs">Builder Mindset</span>
+</div>
+<!-- Fast Quick Fact Stats -->
+<div class="grid grid-cols-3 gap-6 pt-6 border-t border-[#242424]">
+<div>
+<div class="font-display-xl text-3xl sm:text-4xl font-bold text-[#f5f5f5]">0→1</div>
+<div class="font-label-mono-sm text-[#737373] uppercase mt-1">PRODUCT BUILDS</div>
+</div>
+<div>
+<div class="font-display-xl text-3xl sm:text-4xl font-bold text-[#f5f5f5]">4+</div>
+<div class="font-label-mono-sm text-[#737373] uppercase mt-1">CORE PRODUCTS</div>
+</div>
+<div>
+<div class="font-display-xl text-3xl sm:text-4xl font-bold text-primary">BUILD</div>
+<div class="font-label-mono-sm text-[#737373] uppercase mt-1">LEARN → SHIP</div>
+</div>
+</div>
+</div>
+<!-- Right Visual Studio Portrait with Overlapping Floating Card -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-2xl overflow-hidden border border-[#242424] bg-[#121212] shadow-2xl">
+<img alt="Santhosh Bommasamudram — product builder" class="w-full h-[460px] sm:h-[540px] object-cover brightness-95"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80"></div>
+</div>
+<!-- Overlapping Floating Glass Stack Card -->
+<div class="relative lg:absolute -bottom-8 -left-6 sm:left-6 right-6 lg:right-auto lg:w-[320px] p-5 rounded-xl bg-[#121212]/90 backdrop-blur-xl border border-primary/30 shadow-[0_10px_35px_rgba(0,0,0,0.6)]">
+<div class="flex items-center justify-between pb-3 border-b border-[#242424]">
+<span class="font-label-mono-sm text-xs uppercase text-primary font-medium tracking-wider">DAILY ARSENAL</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<div class="grid grid-cols-2 gap-2.5 pt-3 font-label-mono-sm text-xs text-[#cfc2d6]">
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold">›</span> Figma
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold">›</span> PostHog
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold">›</span> JavaScript
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold">›</span> Python
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold">›</span> Notion
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold">›</span> n8n
+              </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICES SECTION -->
+<section class="w-full py-space-3xl px-margin lg:px-margin-desktop bg-[#121212] border-y border-[#242424] relative" id="services">
+<div class="max-w-[1320px] mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<div class="flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-widest mb-3">
+<span>// 03</span>
+<span>PRODUCT CAPABILITIES</span>
+</div>
+<h2 class="font-headline-lg text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.04em] text-[#f5f5f5]">
+            What I work on.
+          </h2>
+</div>
+<p class="font-body-md text-[#737373] max-w-md">
+          The areas where I spend most of my time building, thinking, and experimenting.
+        </p>
+</div>
+<!-- 3-Column Service Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: UI/UX -->
+<div class="rounded-2xl bg-[#1a1a1a] border border-[#242424] hover:border-primary/60 p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] group">
+<div class="space-y-5">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary tracking-widest uppercase">CATEGORY: [01 // UI/UX]</span>
+<span class="material-symbols-outlined text-primary text-2xl">layers</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold text-[#f5f5f5] group-hover:text-primary transition-colors">
+              Product Discovery
+            </h3>
+<p class="font-body-md text-[#737373] leading-relaxed">
+              Turning ambiguous ideas into clearer product problems, hypotheses, user flows, requirements, and testable product concepts.
+            </p>
+<ul class="space-y-2.5 pt-2 border-t border-[#242424] font-body-sm text-[#cfc2d6]">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Problem framing &amp; user research</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>User flows &amp; product requirements</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Figma prototypes &amp; concept testing</span>
+</li>
+</ul>
+</div>
+<div class="pt-8 mt-6 border-t border-[#242424] flex items-baseline justify-between">
+<span class="font-label-mono-sm text-xs text-[#737373]">FOCUS</span>
+<span class="font-headline-md text-2xl font-bold text-[#f5f5f5]">DISCOVERY</span>
+</div>
+</div>
+<!-- Card 2: PostHog Dev -->
+<div class="rounded-2xl bg-[#1a1a1a] border border-[#242424] hover:border-primary/60 p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] group relative">
+<div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-primary text-[#0a0a0a] font-label-mono-sm text-[10px] font-bold uppercase tracking-wider">
+            CORE STRENGTH
+          </div>
+<div class="space-y-5">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary tracking-widest uppercase">CATEGORY: [02 // BUILD]</span>
+<span class="material-symbols-outlined text-primary text-2xl">code_blocks</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold text-[#f5f5f5] group-hover:text-primary transition-colors">
+              Rapid Prototyping
+            </h3>
+<p class="font-body-md text-[#737373] leading-relaxed">
+              Building working prototypes and small product experiments to test ideas faster than long discussions or static documents.
+            </p>
+<ul class="space-y-2.5 pt-2 border-t border-[#242424] font-body-sm text-[#cfc2d6]">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Fast clickable prototypes</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Working product experiments</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Prototype → feedback loops</span>
+</li>
+</ul>
+</div>
+<div class="pt-8 mt-6 border-t border-[#242424] flex items-baseline justify-between">
+<span class="font-label-mono-sm text-xs text-[#737373]">FOCUS</span>
+<span class="font-headline-md text-2xl font-bold text-[#f5f5f5]">PROTOTYPE</span>
+</div>
+</div>
+<!-- Card 3: Product Analytics -->
+<div class="rounded-2xl bg-[#1a1a1a] border border-[#242424] hover:border-primary/60 p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] group">
+<div class="space-y-5">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary tracking-widest uppercase">CATEGORY: [03 // SYSTEMS]</span>
+<span class="material-symbols-outlined text-primary text-2xl">hub</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold text-[#f5f5f5] group-hover:text-primary transition-colors">
+              Product Analytics
+            </h3>
+<p class="font-body-md text-[#737373] leading-relaxed">
+              Using product analytics and feedback loops to understand activation, drop-offs, usage patterns, and where a product needs iteration.
+            </p>
+<ul class="space-y-2.5 pt-2 border-t border-[#242424] font-body-sm text-[#cfc2d6]">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>PostHog event tracking</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Funnel and activation analysis</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Experiment-driven iteration</span>
+</li>
+</ul>
+</div>
+<div class="pt-8 mt-6 border-t border-[#242424] flex items-baseline justify-between">
+<span class="font-label-mono-sm text-xs text-[#737373]">FOCUS</span>
+<span class="font-headline-md text-2xl font-bold text-[#f5f5f5]">MEASURE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TECHNOLOGIES STRIP -->
+<section class="w-full py-space-2xl px-margin lg:px-margin-desktop border-b border-[#242424] relative" id="technologies">
+<div class="max-w-[1320px] mx-auto text-center">
+<div class="flex items-center justify-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-widest mb-3">
+<span>// 04</span>
+<span>PRODUCT + TECH STACK</span>
+</div>
+<h2 class="font-headline-md text-3xl sm:text-4xl font-bold tracking-tight text-[#f5f5f5] mb-10">
+        Tools I use.
+      </h2>
+<!-- 6-Column Interactive Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="rounded-xl bg-[#121212] border border-[#242424] hover:border-primary/60 p-5 flex flex-col items-center gap-3 transition-all duration-300 hover:shadow-[0_0_24px_rgba(168,85,247,0.2)] group">
+<span class="material-symbols-outlined text-3xl text-[#737373] group-hover:text-primary transition-colors">draw</span>
+<span class="font-label-ui text-sm text-[#cfc2d6] group-hover:text-white">Figma</span>
+<span class="font-label-mono-sm text-[10px] text-[#737373]">Tokens / Prototyping</span>
+</div>
+<div class="rounded-xl bg-[#121212] border border-[#242424] hover:border-primary/60 p-5 flex flex-col items-center gap-3 transition-all duration-300 hover:shadow-[0_0_24px_rgba(168,85,247,0.2)] group">
+<span class="material-symbols-outlined text-3xl text-[#737373] group-hover:text-primary transition-colors">web</span>
+<span class="font-label-ui text-sm text-[#cfc2d6] group-hover:text-white">PostHog</span>
+<span class="font-label-mono-sm text-[10px] text-[#737373]">Product Notes</span>
+</div>
+<div class="rounded-xl bg-[#121212] border border-[#242424] hover:border-primary/60 p-5 flex flex-col items-center gap-3 transition-all duration-300 hover:shadow-[0_0_24px_rgba(168,85,247,0.2)] group">
+<span class="material-symbols-outlined text-3xl text-[#737373] group-hover:text-primary transition-colors">code</span>
+<span class="font-label-ui text-sm text-[#cfc2d6] group-hover:text-white">React</span>
+<span class="font-label-mono-sm text-[10px] text-[#737373]">JavaScript / Web</span>
+</div>
+<div class="rounded-xl bg-[#121212] border border-[#242424] hover:border-primary/60 p-5 flex flex-col items-center gap-3 transition-all duration-300 hover:shadow-[0_0_24px_rgba(168,85,247,0.2)] group">
+<span class="material-symbols-outlined text-3xl text-[#737373] group-hover:text-primary transition-colors">view_quilt</span>
+<span class="font-label-ui text-sm text-[#cfc2d6] group-hover:text-white">Notion</span>
+<span class="font-label-mono-sm text-[10px] text-[#737373]">n8n / Automation</span>
+</div>
+<div class="rounded-xl bg-[#121212] border border-[#242424] hover:border-primary/60 p-5 flex flex-col items-center gap-3 transition-all duration-300 hover:shadow-[0_0_24px_rgba(168,85,247,0.2)] group">
+<span class="material-symbols-outlined text-3xl text-[#737373] group-hover:text-primary transition-colors">palette</span>
+<span class="font-label-ui text-sm text-[#cfc2d6] group-hover:text-white">Adobe CC</span>
+<span class="font-label-mono-sm text-[10px] text-[#737373]">Figma / Canva</span>
+</div>
+<div class="rounded-xl bg-[#121212] border border-[#242424] hover:border-primary/60 p-5 flex flex-col items-center gap-3 transition-all duration-300 hover:shadow-[0_0_24px_rgba(168,85,247,0.2)] group">
+<span class="material-symbols-outlined text-3xl text-[#737373] group-hover:text-primary transition-colors">terminal</span>
+<span class="font-label-ui text-sm text-[#cfc2d6] group-hover:text-white">Python</span>
+<span class="font-label-mono-sm text-[10px] text-[#737373]">Analytics / PostHog</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS -->
+<section class="w-full py-space-3xl px-margin lg:px-margin-desktop border-b border-[#242424] relative" id="testimonials">
+<div class="max-w-[1320px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<div class="flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-widest mb-3">
+<span>// 05</span>
+<span>WORKING STYLE</span>
+</div>
+<h2 class="font-headline-lg text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.04em] text-[#f5f5f5]">
+            How I work.
+          </h2>
+</div>
+<p class="font-body-md text-[#737373] max-w-md">
+          A few principles that show up across my projects and product work.
+        </p>
+</div>
+<!-- Testimonial Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="rounded-2xl bg-[#121212] border border-[#242424] border-t-2 border-t-[#a855f7] p-8 flex flex-col justify-between hover:border-primary/40 transition-colors">
+<blockquote class="font-body-md text-[#cfc2d6] italic text-base leading-relaxed mb-6">
+            “I like getting close to the actual problem before jumping into a solution. A working prototype usually tells me more than a long discussion.”
+          </blockquote>
+<div class="flex items-center gap-3 pt-4 border-t border-[#242424]">
+<div class="w-10 h-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center font-label-mono text-primary font-bold text-xs">
+              AL
+            </div>
+<div>
+<div class="font-label-ui text-sm font-semibold text-[#f5f5f5]">Product Principle</div>
+<div class="font-label-mono-sm text-xs text-[#737373]">PROBLEM → PROTOTYPE → EVIDENCE</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="rounded-2xl bg-[#121212] border border-[#242424] border-t-2 border-t-[#a855f7] p-8 flex flex-col justify-between hover:border-primary/40 transition-colors">
+<blockquote class="font-body-md text-[#cfc2d6] italic text-base leading-relaxed mb-6">
+            “I’m comfortable working across product, design, analytics, and code when that helps reduce uncertainty and move an idea forward.”
+          </blockquote>
+<div class="flex items-center gap-3 pt-4 border-t border-[#242424]">
+<div class="w-10 h-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center font-label-mono text-primary font-bold text-xs">
+              SC
+            </div>
+<div>
+<div class="font-label-ui text-sm font-semibold text-[#f5f5f5]">Build Principle</div>
+<div class="font-label-mono-sm text-xs text-[#737373]">BUILD TO LEARN</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="rounded-2xl bg-[#121212] border border-[#242424] border-t-2 border-t-[#a855f7] p-8 flex flex-col justify-between hover:border-primary/40 transition-colors">
+<blockquote class="font-body-md text-[#cfc2d6] italic text-base leading-relaxed mb-6">
+            “I care about the messy middle — the part where the idea is unclear, the constraints change, and someone still has to make the product move.”
+          </blockquote>
+<div class="flex items-center gap-3 pt-4 border-t border-[#242424]">
+<div class="w-10 h-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center font-label-mono text-primary font-bold text-xs">
+              KM
+            </div>
+<div>
+<div class="font-label-ui text-sm font-semibold text-[#f5f5f5]">Working Principle</div>
+<div class="font-label-mono-sm text-xs text-[#737373]">OWN THE MESSY MIDDLE</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA CONVERSION TERMINAL -->
+<section class="w-full py-space-3xl px-margin lg:px-margin-desktop relative overflow-hidden" id="hire-me">
+<div class="max-w-[1100px] mx-auto relative rounded-3xl bg-[#121212] border border-primary/40 p-8 sm:p-16 lg:p-20 text-center overflow-hidden shadow-[0_0_60px_rgba(168,85,247,0.12)]">
+<!-- Ambient Center Radial Glow -->
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(168,85,247,0.18)_0%,_transparent_70%)] pointer-events-none"></div>
+<div class="relative z-10 max-w-2xl mx-auto space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1a1a1a] border border-primary/30 text-primary font-label-mono-sm text-[11px] tracking-wider uppercase">
+<span>// OPEN TO PRODUCT ROLES</span>
+</div>
+<h2 class="font-headline-lg text-4xl sm:text-6xl font-extrabold tracking-[-0.04em] text-[#f5f5f5]">
+          Let’s build something useful.
+        </h2>
+<p class="font-body-lg text-[#cfc2d6] font-light leading-relaxed">
+          Have a product problem, an early idea, or something that needs to be figured out? I’m open to product, APM, and product-building opportunities.
+        </p>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+<a class="inline-flex items-center gap-2 bg-[#a855f7] hover:bg-[#8b25f0] text-[#0a0a0a] font-label-ui text-base px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:shadow-[0_0_40px_rgba(168,85,247,0.6)] font-semibold" href="mailto:work.santhosh18@gmail.com">
+<span>Let’s talk product</span>
+<span class="font-label-mono">→</span>
+</a>
+<a class="inline-flex items-center gap-2 bg-[#1a1a1a] hover:bg-[#242424] text-[#f5f5f5] border border-[#242424] hover:border-primary/50 font-label-ui text-base px-7 py-4 rounded-xl transition-all duration-300 font-medium" href="mailto:work.santhosh18@gmail.com">
+<span class="material-symbols-outlined text-primary text-xl">mail</span>
+<span>work.santhosh18@gmail.com</span>
+</a>
+</div>
+<!-- Availability Footnote -->
+<div class="pt-8 mt-8 border-t border-[#242424]/60">
+<p class="font-label-mono-sm text-xs text-[#737373] tracking-wider uppercase">
+<span class="text-primary mr-1">●</span> CURRENT STATUS: ACCEPTING Q2/Q3 PROJECTS  ·  AVG RESPONSE TIME &lt; 12H
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript for Cursor Follower & Micro-Interactions -->
 <script>
-  // Simple micro-interaction for smooth scrolling on the internal anchor
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElem = document.getElementById(targetId);
-      if (targetElem) {
-        e.preventDefault();
-        targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    (function () {
+      const glow = document.getElementById('cursor-glow');
+      if (glow && window.matchMedia('(pointer: fine)').matches) {
+        window.addEventListener('mousemove', (e) => {
+          glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+        });
+      } else if (glow) {
+        glow.style.display = 'none';
       }
-    });
-  });
-</script></main><footer class="w-full bg-surface-container-high shadow-[0_-2px_0px_#1b1b1f] pt-space-xl pb-space-lg"><div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter flex flex-col gap-space-lg"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-on-surface tracking-tight uppercase">SANTHOSH BOMMASAMUDRAM</span><span class="font-label-sm text-label-sm px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed rounded-sm shadow-[1.5px_1.5px_0px_#1b1b1f]">BUILDER &amp; CS GRAD</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Zero generic PRDs. Only working prototypes &amp; verifiable decisions. Engineered with tactile interfaces, systems architecture, and product velocity.</p></div><div class="flex flex-wrap items-center gap-space-sm"><a class="px-3 py-1.5 bg-surface-container-lowest text-on-surface rounded-sm shadow-[2px_2px_0px_#1b1b1f] font-label-sm text-label-sm hover:bg-surface-container transition-colors" href="#">GITHUB ↗</a><a class="px-3 py-1.5 bg-surface-container-lowest text-on-surface rounded-sm shadow-[2px_2px_0px_#1b1b1f] font-label-sm text-label-sm hover:bg-surface-container transition-colors" href="#">LINKEDIN ↗</a><a class="px-3 py-1.5 bg-surface-container-lowest text-on-surface rounded-sm shadow-[2px_2px_0px_#1b1b1f] font-label-sm text-label-sm hover:bg-surface-container transition-colors" href="#">RESUME (PDF) ↗</a><a class="px-3 py-1.5 bg-secondary-container text-on-secondary-container rounded-sm shadow-[2px_2px_0px_#1b1b1f] font-label-sm text-label-sm hover:bg-secondary-fixed transition-colors" href="#">EMAIL TRANSMISSION ↗</a></div></div><div class="h-[2px] w-full bg-outline-variant"></div><div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span>LAT/LON: 12.9716° N, 77.5946° E</span><span>•</span><span>SYS_STATUS: ACTIVE</span></div><div class="font-label-sm text-label-sm text-on-surface-variant">© 2025 SANTHOSH B. PROTOTYPED &amp; SHIPPED UNDER RAPID CYCLES.</div></div></div></footer></body></html>
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-2xl"><div class="max-w-[1320px] mx-auto px-margin lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop items-start pb-space-2xl border-b border-outline-variant/20"><div class="md:col-span-6 space-y-space-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Santhosh Bommasamudram</span><span class="font-label-mono-sm text-label-mono-sm text-primary px-space-xs py-0.5 rounded bg-surface-container-high border border-primary/20">OPEN TO PRODUCT ROLES</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">CS graduate and product builder working across product discovery, AI products, prototyping, analytics, and technical execution.</p></div><div class="md:col-span-6 flex flex-col md:items-end justify-between space-y-space-md"><div class="flex items-center gap-space-lg flex-wrap"><a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" href="#">PORTFOLIO</a><a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" href="#">LINKEDIN</a><a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">LINKEDIN</a><a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" data-path="technologies" href="#">GITHUB</a></div><div class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-outline"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span>BASED IN INDIA — OPEN TO REMOTE / HYBRID</span></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><span class="font-label-mono-sm text-label-mono-sm text-outline">© 2026 Santhosh Bommasamudram. All rights reserved.</span><div class="flex items-center gap-space-lg"><span class="font-label-mono-sm text-label-mono-sm text-outline">BUILT WITH PRODUCT CURIOSITY</span><a class="font-label-mono-sm text-label-mono-sm text-on-surface-variant hover:text-primary transition-colors" href="#">PRIVACY</a></div></div></div></footer></body></html>
